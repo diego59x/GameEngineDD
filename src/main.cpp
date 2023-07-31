@@ -3,7 +3,7 @@
 #include "Pong.h"
 
 int main(int argc, char* argv[]) {
-    Pong pong = Pong("pong", 800, 600);
+    Pong pong = Pong("pong", 800, 600, 2);
     
     pong.setup();
     while(pong.running()) {

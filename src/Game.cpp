@@ -5,7 +5,6 @@
 Game::Game(const char* name, int width, int height)
     : screen_width(width), screen_height(height) 
     {
-    std::cout << "Constructor";
 
     SDL_Init(SDL_INIT_EVERYTHING);
     lastFPSUpdate = 0;
@@ -22,17 +21,12 @@ Game::Game(const char* name, int width, int height)
 }
 
 Game::~Game() {
-    std::cout << "Destroy";
     SDL_DestroyWindow(window);
 }
 
-void Game::setup() {
+void Game::setup() {}
 
-}
-
-void Game::update() {
-    // SDL_Delay(50);
-}
+void Game::update() {}
 
 void Game::handleEvents() {
     SDL_Event event;
@@ -69,13 +63,10 @@ void Game::frameEnd() {
         lastFPSUpdate = currentTime;
         framesCountPerSecond = 0;
     }
-
 }
 
 void Game::render() {
-    // SDL_SetRenderDrawColor(renderer, 0, 0, 0, 1);
     SDL_RenderClear(renderer);
-
     SDL_RenderPresent(renderer);
 }
 

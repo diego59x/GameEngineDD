@@ -7,12 +7,12 @@ class Game {
         Game(const char* name, int width, int height);
         ~Game();
 
-        void setup();
+        virtual void setup() = 0;
         void frameStart();
-        void handleEvents();
+        virtual void handleEvents() = 0;
         void frameEnd();
-        void update();
-        void render();
+        virtual void update() = 0;
+        virtual void render() = 0;
         bool running();
 
     protected:
