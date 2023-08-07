@@ -1,6 +1,6 @@
 #pragma once
-#include "Game.h"
-#include "objRect.h"
+#include "../Game/Game.h"
+#include "../CustomObj/objRect.h"
 
 class Pong : public Game {
     public: 

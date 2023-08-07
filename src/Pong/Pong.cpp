@@ -1,5 +1,9 @@
-#include "Pong.h"
-#include "objRect.h"
+#include "../Pong/Pong.h"
+#include "../CustomObj/objRect.h"
+#include "../Scene/Scene.h"
+#include "../ECS/Entity.h"
+#include "../ECS/Components.h"
+
 #include <iostream>
 #include <C:\Users\diego\OneDrive\Escritorio\Trabajos\U\DecimoSemestre\MMake\src\include\SDL2\SDL.h>
 
@@ -12,6 +16,8 @@ Pong::Pong(const char* name, int width, int height, int ball_speed) :
     player_two_score = 0;
     step = 20;
     division = objRect("division", (screen_width/2), 0, 10, screen_height);
+
+    Scene* scene = new Scene("Scene1");
 }
 Pong::~Pong() {
     std::cout << "Player Left Score: " << player_two_score << " Player Right Score: " << player_one_score;

@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Game.h"
-#include "Pong.h"
+#include "Pong/Pong.h"
+#include "Game/Game.h"
 
 int main(int argc, char* argv[]) {
     Pong pong = Pong("pong", 800, 600, 2);
