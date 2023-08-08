@@ -1,5 +1,5 @@
 #pragma once
-#include <C:\Users\diego\OneDrive\Escritorio\Trabajos\U\DecimoSemestre\MMake\src\include\SDL2\SDL.h>
+#include <SDL2/SDL.h>
 
 class objRect {
     public: 

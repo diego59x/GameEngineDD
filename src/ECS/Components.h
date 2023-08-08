@@ -1,5 +1,5 @@
 #pragma once
-#include "C:\Development\glm-master\glm\glm.hpp"
+#include <glm/glm.hpp>
 #include <string>
 
 struct NameComponent {

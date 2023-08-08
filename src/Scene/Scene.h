@@ -1,5 +1,5 @@
 #pragma once
-#include "C:\Development\entt-master\src\entt\entt.hpp"
+#include <entt/entt.hpp>
 #include <string>
 
 class Scene {

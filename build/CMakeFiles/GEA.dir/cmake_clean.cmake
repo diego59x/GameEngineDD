@@ -1,0 +1,19 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/GEA.dir/src/CustomObj/objRect.cpp.o"
+  "CMakeFiles/GEA.dir/src/CustomObj/objRect.cpp.o.d"
+  "CMakeFiles/GEA.dir/src/Game/Game.cpp.o"
+  "CMakeFiles/GEA.dir/src/Game/Game.cpp.o.d"
+  "CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o"
+  "CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o.d"
+  "CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o"
+  "CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o.d"
+  "CMakeFiles/GEA.dir/src/main.cpp.o"
+  "CMakeFiles/GEA.dir/src/main.cpp.o.d"
+  "GEA"
+  "GEA.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/GEA.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

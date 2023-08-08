@@ -5,7 +5,7 @@
 #include "../ECS/Components.h"
 
 #include <iostream>
-#include <C:\Users\diego\OneDrive\Escritorio\Trabajos\U\DecimoSemestre\MMake\src\include\SDL2\SDL.h>
+#include <SDL2/SDL.h>
 
 int step;
 Pong::Pong(const char* name, int width, int height, int ball_speed) :
