@@ -24,18 +24,23 @@ Game::~Game() {
     SDL_DestroyWindow(window);
 }
 
-void Game::setup() {}
-
-void Game::update() {}
-
-void Game::handleEvents() {
-    SDL_Event event;
-    while (SDL_PollEvent(&event)) {
-        if (event.type == SDL_QUIT) {
-            isRunning = false;
-        }
-    }
+void Game::setScene(Scene* newScene) {
+  currentScene = newScene;
+  currentScene->setup();
 }
+
+void Game::update() {
+    currentScene->update(dT);
+}
+
+// void Game::handleEvents() {
+//     SDL_Event event;
+//     while (SDL_PollEvent(&event)) {
+//         if (event.type == SDL_QUIT) {
+//             isRunning = false;
+//         }
+//     }
+// }
 void Game::frameStart() {
     frameStartTimestamp = SDL_GetTicks();
 
@@ -66,10 +71,37 @@ void Game::frameEnd() {
 }
 
 void Game::render() {
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 1);
     SDL_RenderClear(renderer);
+
+    // draw game
+    currentScene->render(renderer);
+
     SDL_RenderPresent(renderer);
+}
+
+void Game::handleEvents() {
+  SDL_Event event;
+  while (SDL_PollEvent(&event)) {
+    if (event.type == SDL_QUIT) {
+      isRunning = false;
+    }
+    currentScene->processEvents(event);
+  }
 }
 
 bool Game::running() {
     return isRunning;
+}
+
+void Game::run() {
+  while (running()) {
+    frameStart();
+
+    handleEvents();
+    update();
+    render();
+
+    frameEnd();
+  }
 }

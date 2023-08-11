@@ -1,97 +1,131 @@
-#include "../Pong/Pong.h"
-#include "../CustomObj/objRect.h"
-#include "../Scene/Scene.h"
-#include "../ECS/Entity.h"
-#include "../ECS/Components.h"
-
 #include <iostream>
 #include <SDL2/SDL.h>
 
-int step;
-Pong::Pong(const char* name, int width, int height, int ball_speed) :
- Game(name, width, height) {
-    ball_speed_x = ball_speed;
-    ball_speed_y = ball_speed;
-    player_one_score = 0;
-    player_two_score = 0;
-    step = 20;
-    division = objRect("division", (screen_width/2), 0, 10, screen_height);
+#include "./Pong.h"
+#include "./Systems.h"
 
-    Scene* scene = new Scene("Scene1");
+#include "../ECS/Entity.h"
+
+Pong::Pong(const char* name, int width, int height)
+  : Game(name, width, height)
+{
+  Scene* gameplayScene = createGameplayScene();
+  setScene(gameplayScene);
 }
+
 Pong::~Pong() {
-    std::cout << "Player Left Score: " << player_two_score << " Player Right Score: " << player_one_score;
+
 }
 
-void Pong::setup() {
-    ball = objRect("ball", (screen_width/2), (screen_height/2), 20, 20);
-    paddle_playerOne = objRect("playerOne", screen_width - 20, (screen_height/2), 20, 100);
-    paddle_playerTwo = objRect("playerTwo", 0, (screen_height/2), 20, 100);
+Scene* Pong::createGameplayScene() {
+  Scene* scene = new Scene("GAMEPLAY SCENE");
+
+  Entity ball = scene->createEntity("BALL", 10, 10);
+  ball.addComponent<SizeComponent>(20, 20);
+  ball.addComponent<SpeedComponent>(200, 200);
+  ball.addComponent<ColliderComponent>(false, 0);
+
+  Entity paddle = scene->createEntity("PLAYER 1", (screen_width/2) - 50, screen_height - 20);
+  paddle.addComponent<SizeComponent>(100, 20);
+  paddle.addComponent<SpeedComponent>(0, 0);
+  paddle.addComponent<PlayerComponent>(200);
+
+
+  scene->addSetupSystem(new HelloWorldSystem());
+  scene->addRenderSystem(new RectRenderSystem());
+  scene->addUpdateSystem(new BounceUpdateSystem());
+  scene->addUpdateSystem(new MovementUpdateSystem(screen_width, screen_height));
+  scene->addEventSystem(new PlayerInputSystem());
+
+  scene->addUpdateSystem(new CollisionDetectionUpdateSystem());
+
+  return scene;
 }
+// int step;
+// Pong::Pong(const char* name, int width, int height, int ball_speed) :
+//  Game(name, width, height) {
+//     ball_speed_x = ball_speed;
+//     ball_speed_y = ball_speed;
+//     player_one_score = 0;
+//     player_two_score = 0;
+//     step = 20;
+//     division = objRect("division", (screen_width/2), 0, 10, screen_height);
 
-void Pong::update() {
+//     Scene* scene = new Scene("Scene1");
+// }
+// Pong::~Pong() {
+//     std::cout << "Player Left Score: " << player_two_score << " Player Right Score: " << player_one_score;
+// }
 
-    if (ball.pos_x <= 0) {player_one_score++; setup();}
-    if (ball.pos_x >= screen_width - ball.width) {player_two_score++; setup();}
+// void Pong::setup() {
+//     ball = objRect("ball", (screen_width/2), (screen_height/2), 20, 20);
+//     paddle_playerOne = objRect("playerOne", screen_width - 20, (screen_height/2), 20, 100);
+//     paddle_playerTwo = objRect("playerTwo", 0, (screen_height/2), 20, 100);
+// }
 
-    if (ball.pos_y <= 0) {ball_speed_y *= -1.3;};
-    if (ball.pos_y >= screen_height - ball.height) {ball_speed_y *= -1.3;};
+// void Pong::update() {
 
-    ball.moveX(ball_speed_x);
-    ball.moveY(ball_speed_y);
+//     if (ball.pos_x <= 0) {player_one_score++; setup();}
+//     if (ball.pos_x >= screen_width - ball.width) {player_two_score++; setup();}
 
-    // Collisions
-    collision_paddle_playerOne = SDL_HasIntersection(&ball.rect, &paddle_playerOne.rect);
-    collision_paddle_playerTwo = SDL_HasIntersection(&ball.rect, &paddle_playerTwo.rect);
-    if (collision_paddle_playerOne || collision_paddle_playerTwo) ball_speed_x *= -1.1;
-}
+//     if (ball.pos_y <= 0) {ball_speed_y *= -1.3;};
+//     if (ball.pos_y >= screen_height - ball.height) {ball_speed_y *= -1.3;};
 
-void Pong::handleEvents() {
-    SDL_Event event;
-    while (SDL_PollEvent(&event)) {
-        if (event.type == SDL_QUIT) {
-            isRunning = false;
-        }
-        if (event.type == SDL_KEYDOWN) {
-            switch (event.key.keysym.sym)
-            {
-            case SDLK_UP:
-                if (paddle_playerOne.pos_y - step >= 0)
-                    paddle_playerOne.moveY(-step);
-                break;
-            case SDLK_DOWN:
-                if (paddle_playerOne.pos_y + paddle_playerOne.height + step <= screen_height)
-                    paddle_playerOne.moveY(step);
-                break;
-            case SDLK_w:
-                if (paddle_playerTwo.pos_y - step >= 0)
-                    paddle_playerTwo.moveY(-step);
-                break;
-            case SDLK_s:
-                if (paddle_playerTwo.pos_y + paddle_playerTwo.height + step <= screen_height)
-                    paddle_playerTwo.moveY(step);
-                break;
-            default:
-                break;
-            }
-        }
-    }
-}
+//     ball.moveX(ball_speed_x);
+//     ball.moveY(ball_speed_y);
 
-void Pong::render(){
+//     // Collisions
+//     collision_paddle_playerOne = SDL_HasIntersection(&ball.rect, &paddle_playerOne.rect);
+//     collision_paddle_playerTwo = SDL_HasIntersection(&ball.rect, &paddle_playerTwo.rect);
+//     if (collision_paddle_playerOne || collision_paddle_playerTwo) ball_speed_x *= -1.1;
+// }
 
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 1);
-    SDL_RenderClear(renderer);
+// void Pong::handleEvents() {
+//     SDL_Event event;
+//     while (SDL_PollEvent(&event)) {
+//         if (event.type == SDL_QUIT) {
+//             isRunning = false;
+//         }
+//         if (event.type == SDL_KEYDOWN) {
+//             switch (event.key.keysym.sym)
+//             {
+//             case SDLK_UP:
+//                 if (paddle_playerOne.pos_y - step >= 0)
+//                     paddle_playerOne.moveY(-step);
+//                 break;
+//             case SDLK_DOWN:
+//                 if (paddle_playerOne.pos_y + paddle_playerOne.height + step <= screen_height)
+//                     paddle_playerOne.moveY(step);
+//                 break;
+//             case SDLK_w:
+//                 if (paddle_playerTwo.pos_y - step >= 0)
+//                     paddle_playerTwo.moveY(-step);
+//                 break;
+//             case SDLK_s:
+//                 if (paddle_playerTwo.pos_y + paddle_playerTwo.height + step <= screen_height)
+//                     paddle_playerTwo.moveY(step);
+//                 break;
+//             default:
+//                 break;
+//             }
+//         }
+//     }
+// }
 
-    // draw game
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 1);
+// void Pong::render(){
 
-    SDL_RenderFillRect(renderer, &ball.rect);
-    SDL_RenderFillRect(renderer, &paddle_playerOne.rect);
-    SDL_RenderFillRect(renderer, &paddle_playerTwo.rect);
+//     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 1);
+//     SDL_RenderClear(renderer);
 
-    SDL_SetRenderDrawColor(renderer, 255, 0, 255, 0.5);
-    SDL_RenderFillRect(renderer, &division.rect);
+//     // draw game
+//     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 1);
 
-    SDL_RenderPresent(renderer);
-}
+//     SDL_RenderFillRect(renderer, &ball.rect);
+//     SDL_RenderFillRect(renderer, &paddle_playerOne.rect);
+//     SDL_RenderFillRect(renderer, &paddle_playerTwo.rect);
+
+//     SDL_SetRenderDrawColor(renderer, 255, 0, 255, 0.5);
+//     SDL_RenderFillRect(renderer, &division.rect);
+
+//     SDL_RenderPresent(renderer);
+// }

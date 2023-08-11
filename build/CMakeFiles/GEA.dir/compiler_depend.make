@@ -594,33 +594,286 @@ CMakeFiles/GEA.dir/src/Game/Game.cpp.o: ../src/Game/Game.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/SDL_locale.h \
   /usr/include/SDL2/SDL_misc.h \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/exception \
-  /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  ../src/Scene/Scene.h \
+  /usr/include/entt/entt.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/config/version.h \
+  /usr/include/entt/config/macro.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  /usr/include/entt/config/macro.h \
+  /usr/include/entt/config/version.h \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/c++/11/cstddef \
+  /usr/include/c++/11/functional \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/unordered_map \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/hashtable.h \
+  /usr/include/c++/11/bits/hashtable_policy.h \
+  /usr/include/c++/11/bits/enable_special_members.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/unordered_map.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/iterator \
+  /usr/include/c++/11/bits/stream_iterator.h \
+  /usr/include/c++/11/bits/streambuf_iterator.h \
+  /usr/include/c++/11/streambuf \
   /usr/include/c++/11/bits/ios_base.h \
   /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
   /usr/include/c++/11/system_error \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
   /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/streambuf.tcc \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/ios \
   /usr/include/c++/11/bits/basic_ios.h \
   /usr/include/c++/11/bits/locale_facets.h \
   /usr/include/c++/11/cwctype \
   /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
-  /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/bits/atomic_wait.h \
+  /usr/include/c++/11/climits \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/syscall.h \
+  /usr/include/x86_64-linux-gnu/sys/syscall.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
+  /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/c++/11/bits/ranges_uninitialized.h \
+  /usr/include/c++/11/bits/ranges_algobase.h \
+  /usr/include/c++/11/bits/uses_allocator_args.h \
+  /usr/include/c++/11/pstl/glue_memory_defs.h \
+  /usr/include/c++/11/pstl/execution_defs.h \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/container/fwd.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/core/algorithm.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/ranges_algo.h \
+  /usr/include/c++/11/bits/ranges_util.h \
+  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/hashed_string.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/enum.hpp \
+  /usr/include/entt/core/family.hpp \
+  /usr/include/entt/core/hashed_string.hpp \
+  /usr/include/entt/core/ident.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/core/monostate.hpp \
+  /usr/include/entt/core/tuple.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/entity/component.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/entity/fwd.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/entity/entity.hpp \
+  /usr/include/entt/entity/group.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/entity/entity.hpp \
+  /usr/include/entt/entity/sparse_set.hpp \
+  /usr/include/entt/core/algorithm.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/entity/storage.hpp \
+  /usr/include/entt/entity/component.hpp \
+  /usr/include/entt/entity/handle.hpp \
+  /usr/include/entt/entity/helper.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/signal/fwd.hpp \
+  /usr/include/entt/entity/group.hpp \
+  /usr/include/entt/entity/view.hpp \
+  /usr/include/entt/entity/mixin.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/entity/observer.hpp \
+  /usr/include/entt/entity/organizer.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/graph/fwd.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/graph/flow.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/entity/helper.hpp \
+  /usr/include/entt/entity/registry.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/entity/mixin.hpp \
+  /usr/include/entt/entity/runtime_view.hpp \
+  /usr/include/entt/entity/snapshot.hpp \
+  /usr/include/entt/entity/sparse_set.hpp \
+  /usr/include/entt/entity/storage.hpp \
+  /usr/include/entt/entity/view.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/graph/dot.hpp \
+  /usr/include/entt/graph/flow.hpp \
+  /usr/include/entt/locator/locator.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/meta/adl_pointer.hpp \
+  /usr/include/entt/meta/container.hpp \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/set \
+  /usr/include/c++/11/bits/stl_set.h \
+  /usr/include/c++/11/bits/stl_multiset.h \
+  /usr/include/c++/11/unordered_set \
+  /usr/include/c++/11/bits/unordered_set.h \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/meta/context.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/meta/meta.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/locator/locator.hpp \
+  /usr/include/entt/meta/adl_pointer.hpp \
+  /usr/include/entt/meta/fwd.hpp \
+  /usr/include/entt/meta/node.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/enum.hpp \
+  /usr/include/entt/meta/type_traits.hpp \
+  /usr/include/entt/meta/range.hpp \
+  /usr/include/entt/meta/context.hpp \
+  /usr/include/entt/meta/factory.hpp \
+  /usr/include/entt/meta/policy.hpp \
+  /usr/include/entt/meta/resolve.hpp \
+  /usr/include/entt/meta/utility.hpp \
+  /usr/include/entt/meta/meta.hpp \
+  /usr/include/entt/meta/node.hpp \
+  /usr/include/entt/meta/pointer.hpp \
+  /usr/include/entt/meta/policy.hpp \
+  /usr/include/entt/meta/range.hpp \
+  /usr/include/entt/meta/resolve.hpp \
+  /usr/include/entt/meta/template.hpp \
+  /usr/include/entt/meta/type_traits.hpp \
+  /usr/include/entt/meta/utility.hpp \
+  /usr/include/entt/platform/android-ndk-r17.hpp \
+  /usr/include/entt/poly/poly.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/poly/fwd.hpp \
+  /usr/include/entt/process/process.hpp \
+  /usr/include/entt/process/scheduler.hpp \
+  /usr/include/entt/process/fwd.hpp \
+  /usr/include/entt/process/process.hpp \
+  /usr/include/entt/resource/cache.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/resource/fwd.hpp \
+  /usr/include/entt/resource/loader.hpp \
+  /usr/include/entt/resource/resource.hpp \
+  /usr/include/entt/resource/loader.hpp \
+  /usr/include/entt/resource/resource.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/signal/dispatcher.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  /usr/include/entt/signal/emitter.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  ../src/ECS/SystemTypes/SetupSystem.h \
+  ../src/ECS/System.h \
+  ../src/ECS/SystemTypes/EventSystem.h \
+  ../src/ECS/SystemTypes/UpdateSystem.h \
+  ../src/ECS/SystemTypes/RenderSystem.h \
+  /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc
 
@@ -957,15 +1210,15 @@ CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: ../src/Pong/Pong.cpp \
   /usr/include/SDL2/SDL_misc.h \
   ../src/CustomObj/objRect.h \
   ../src/Scene/Scene.h \
-  /usr/include/entt/srce/entt/entt.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/config/version.h \
-  /usr/include/entt/srce/entt/config/macro.h \
+  /usr/include/entt/entt.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/config/version.h \
+  /usr/include/entt/config/macro.h \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
-  /usr/include/entt/srce/entt/config/macro.h \
-  /usr/include/entt/srce/entt/config/version.h \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
+  /usr/include/entt/config/macro.h \
+  /usr/include/entt/config/version.h \
+  /usr/include/entt/container/dense_map.hpp \
   /usr/include/c++/11/cstddef \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/tuple \
@@ -1060,97 +1313,97 @@ CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: ../src/Pong/Pong.cpp \
   /usr/include/c++/11/bits/uses_allocator_args.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/memory.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/container/fwd.hpp \
-  /usr/include/entt/srce/entt/container/dense_set.hpp \
-  /usr/include/entt/srce/entt/core/algorithm.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/container/fwd.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/core/algorithm.hpp \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/bits/ranges_algo.h \
   /usr/include/c++/11/bits/ranges_util.h \
   /usr/include/c++/11/pstl/glue_algorithm_defs.h \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/core/any.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/attribute.h \
-  /usr/include/entt/srce/entt/core/hashed_string.hpp \
-  /usr/include/entt/srce/entt/core/attribute.h \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/enum.hpp \
-  /usr/include/entt/srce/entt/core/family.hpp \
-  /usr/include/entt/srce/entt/core/hashed_string.hpp \
-  /usr/include/entt/srce/entt/core/ident.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/memory.hpp \
-  /usr/include/entt/srce/entt/core/monostate.hpp \
-  /usr/include/entt/srce/entt/core/tuple.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/entity/component.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/entity/fwd.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/entity/entity.hpp \
-  /usr/include/entt/srce/entt/entity/group.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/entity/entity.hpp \
-  /usr/include/entt/srce/entt/entity/sparse_set.hpp \
-  /usr/include/entt/srce/entt/core/algorithm.hpp \
-  /usr/include/entt/srce/entt/core/any.hpp \
-  /usr/include/entt/srce/entt/core/memory.hpp \
-  /usr/include/entt/srce/entt/entity/storage.hpp \
-  /usr/include/entt/srce/entt/entity/component.hpp \
-  /usr/include/entt/srce/entt/entity/handle.hpp \
-  /usr/include/entt/srce/entt/entity/helper.hpp \
-  /usr/include/entt/srce/entt/signal/delegate.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/signal/fwd.hpp \
-  /usr/include/entt/srce/entt/entity/group.hpp \
-  /usr/include/entt/srce/entt/entity/view.hpp \
-  /usr/include/entt/srce/entt/entity/mixin.hpp \
-  /usr/include/entt/srce/entt/signal/sigh.hpp \
-  /usr/include/entt/srce/entt/signal/delegate.hpp \
-  /usr/include/entt/srce/entt/entity/observer.hpp \
-  /usr/include/entt/srce/entt/entity/organizer.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/graph/adjacency_matrix.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/graph/fwd.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/graph/flow.hpp \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/container/dense_set.hpp \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/graph/adjacency_matrix.hpp \
-  /usr/include/entt/srce/entt/entity/helper.hpp \
-  /usr/include/entt/srce/entt/entity/registry.hpp \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/entity/mixin.hpp \
-  /usr/include/entt/srce/entt/entity/runtime_view.hpp \
-  /usr/include/entt/srce/entt/entity/snapshot.hpp \
-  /usr/include/entt/srce/entt/entity/sparse_set.hpp \
-  /usr/include/entt/srce/entt/entity/storage.hpp \
-  /usr/include/entt/srce/entt/entity/view.hpp \
-  /usr/include/entt/srce/entt/graph/adjacency_matrix.hpp \
-  /usr/include/entt/srce/entt/graph/dot.hpp \
-  /usr/include/entt/srce/entt/graph/flow.hpp \
-  /usr/include/entt/srce/entt/locator/locator.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/meta/adl_pointer.hpp \
-  /usr/include/entt/srce/entt/meta/container.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/hashed_string.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/enum.hpp \
+  /usr/include/entt/core/family.hpp \
+  /usr/include/entt/core/hashed_string.hpp \
+  /usr/include/entt/core/ident.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/core/monostate.hpp \
+  /usr/include/entt/core/tuple.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/entity/component.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/entity/fwd.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/entity/entity.hpp \
+  /usr/include/entt/entity/group.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/entity/entity.hpp \
+  /usr/include/entt/entity/sparse_set.hpp \
+  /usr/include/entt/core/algorithm.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/entity/storage.hpp \
+  /usr/include/entt/entity/component.hpp \
+  /usr/include/entt/entity/handle.hpp \
+  /usr/include/entt/entity/helper.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/signal/fwd.hpp \
+  /usr/include/entt/entity/group.hpp \
+  /usr/include/entt/entity/view.hpp \
+  /usr/include/entt/entity/mixin.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/entity/observer.hpp \
+  /usr/include/entt/entity/organizer.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/graph/fwd.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/graph/flow.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/entity/helper.hpp \
+  /usr/include/entt/entity/registry.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/entity/mixin.hpp \
+  /usr/include/entt/entity/runtime_view.hpp \
+  /usr/include/entt/entity/snapshot.hpp \
+  /usr/include/entt/entity/sparse_set.hpp \
+  /usr/include/entt/entity/storage.hpp \
+  /usr/include/entt/entity/view.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/graph/dot.hpp \
+  /usr/include/entt/graph/flow.hpp \
+  /usr/include/entt/locator/locator.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/meta/adl_pointer.hpp \
+  /usr/include/entt/meta/container.hpp \
   /usr/include/c++/11/deque \
   /usr/include/c++/11/bits/stl_deque.h \
   /usr/include/c++/11/bits/deque.tcc \
@@ -1166,70 +1419,70 @@ CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: ../src/Pong/Pong.cpp \
   /usr/include/c++/11/bits/stl_multiset.h \
   /usr/include/c++/11/unordered_set \
   /usr/include/c++/11/bits/unordered_set.h \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/container/dense_set.hpp \
-  /usr/include/entt/srce/entt/meta/context.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/meta/meta.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/any.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/locator/locator.hpp \
-  /usr/include/entt/srce/entt/meta/adl_pointer.hpp \
-  /usr/include/entt/srce/entt/meta/fwd.hpp \
-  /usr/include/entt/srce/entt/meta/node.hpp \
-  /usr/include/entt/srce/entt/core/attribute.h \
-  /usr/include/entt/srce/entt/core/enum.hpp \
-  /usr/include/entt/srce/entt/meta/type_traits.hpp \
-  /usr/include/entt/srce/entt/meta/range.hpp \
-  /usr/include/entt/srce/entt/meta/context.hpp \
-  /usr/include/entt/srce/entt/meta/factory.hpp \
-  /usr/include/entt/srce/entt/meta/policy.hpp \
-  /usr/include/entt/srce/entt/meta/resolve.hpp \
-  /usr/include/entt/srce/entt/meta/utility.hpp \
-  /usr/include/entt/srce/entt/meta/meta.hpp \
-  /usr/include/entt/srce/entt/meta/node.hpp \
-  /usr/include/entt/srce/entt/meta/pointer.hpp \
-  /usr/include/entt/srce/entt/meta/policy.hpp \
-  /usr/include/entt/srce/entt/meta/range.hpp \
-  /usr/include/entt/srce/entt/meta/resolve.hpp \
-  /usr/include/entt/srce/entt/meta/template.hpp \
-  /usr/include/entt/srce/entt/meta/type_traits.hpp \
-  /usr/include/entt/srce/entt/meta/utility.hpp \
-  /usr/include/entt/srce/entt/platform/android-ndk-r17.hpp \
-  /usr/include/entt/srce/entt/poly/poly.hpp \
-  /usr/include/entt/srce/entt/core/any.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/poly/fwd.hpp \
-  /usr/include/entt/srce/entt/process/process.hpp \
-  /usr/include/entt/srce/entt/process/scheduler.hpp \
-  /usr/include/entt/srce/entt/process/fwd.hpp \
-  /usr/include/entt/srce/entt/process/process.hpp \
-  /usr/include/entt/srce/entt/resource/cache.hpp \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/resource/fwd.hpp \
-  /usr/include/entt/srce/entt/resource/loader.hpp \
-  /usr/include/entt/srce/entt/resource/resource.hpp \
-  /usr/include/entt/srce/entt/resource/loader.hpp \
-  /usr/include/entt/srce/entt/resource/resource.hpp \
-  /usr/include/entt/srce/entt/signal/delegate.hpp \
-  /usr/include/entt/srce/entt/signal/dispatcher.hpp \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/signal/sigh.hpp \
-  /usr/include/entt/srce/entt/signal/emitter.hpp \
-  /usr/include/entt/srce/entt/signal/sigh.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/meta/context.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/meta/meta.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/locator/locator.hpp \
+  /usr/include/entt/meta/adl_pointer.hpp \
+  /usr/include/entt/meta/fwd.hpp \
+  /usr/include/entt/meta/node.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/enum.hpp \
+  /usr/include/entt/meta/type_traits.hpp \
+  /usr/include/entt/meta/range.hpp \
+  /usr/include/entt/meta/context.hpp \
+  /usr/include/entt/meta/factory.hpp \
+  /usr/include/entt/meta/policy.hpp \
+  /usr/include/entt/meta/resolve.hpp \
+  /usr/include/entt/meta/utility.hpp \
+  /usr/include/entt/meta/meta.hpp \
+  /usr/include/entt/meta/node.hpp \
+  /usr/include/entt/meta/pointer.hpp \
+  /usr/include/entt/meta/policy.hpp \
+  /usr/include/entt/meta/range.hpp \
+  /usr/include/entt/meta/resolve.hpp \
+  /usr/include/entt/meta/template.hpp \
+  /usr/include/entt/meta/type_traits.hpp \
+  /usr/include/entt/meta/utility.hpp \
+  /usr/include/entt/platform/android-ndk-r17.hpp \
+  /usr/include/entt/poly/poly.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/poly/fwd.hpp \
+  /usr/include/entt/process/process.hpp \
+  /usr/include/entt/process/scheduler.hpp \
+  /usr/include/entt/process/fwd.hpp \
+  /usr/include/entt/process/process.hpp \
+  /usr/include/entt/resource/cache.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/resource/fwd.hpp \
+  /usr/include/entt/resource/loader.hpp \
+  /usr/include/entt/resource/resource.hpp \
+  /usr/include/entt/resource/loader.hpp \
+  /usr/include/entt/resource/resource.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/signal/dispatcher.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  /usr/include/entt/signal/emitter.hpp \
+  /usr/include/entt/signal/sigh.hpp \
   ../src/ECS/Entity.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
@@ -1375,10 +1628,10 @@ CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: ../src/Pong/Pong.cpp \
 CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: ../src/Scene/Scene.cpp \
   /usr/include/stdc-predef.h \
   ../src/Scene/Scene.h \
-  /usr/include/entt/srce/entt/entt.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/config/version.h \
-  /usr/include/entt/srce/entt/config/macro.h \
+  /usr/include/entt/entt.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/config/version.h \
+  /usr/include/entt/config/macro.h \
   /usr/include/c++/11/cstdint \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -1403,9 +1656,9 @@ CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: ../src/Scene/Scene.cpp \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
-  /usr/include/entt/srce/entt/config/macro.h \
-  /usr/include/entt/srce/entt/config/version.h \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
+  /usr/include/entt/config/macro.h \
+  /usr/include/entt/config/version.h \
+  /usr/include/entt/container/dense_map.hpp \
   /usr/include/c++/11/cmath \
   /usr/include/c++/11/bits/cpp_type_traits.h \
   /usr/include/c++/11/ext/type_traits.h \
@@ -1664,97 +1917,97 @@ CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: ../src/Scene/Scene.cpp \
   /usr/include/c++/11/bits/uses_allocator_args.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/memory.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/container/fwd.hpp \
-  /usr/include/entt/srce/entt/container/dense_set.hpp \
-  /usr/include/entt/srce/entt/core/algorithm.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/container/fwd.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/core/algorithm.hpp \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/bits/ranges_algo.h \
   /usr/include/c++/11/bits/ranges_util.h \
   /usr/include/c++/11/pstl/glue_algorithm_defs.h \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/core/any.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/attribute.h \
-  /usr/include/entt/srce/entt/core/hashed_string.hpp \
-  /usr/include/entt/srce/entt/core/attribute.h \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/enum.hpp \
-  /usr/include/entt/srce/entt/core/family.hpp \
-  /usr/include/entt/srce/entt/core/hashed_string.hpp \
-  /usr/include/entt/srce/entt/core/ident.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/memory.hpp \
-  /usr/include/entt/srce/entt/core/monostate.hpp \
-  /usr/include/entt/srce/entt/core/tuple.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/entity/component.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/entity/fwd.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/entity/entity.hpp \
-  /usr/include/entt/srce/entt/entity/group.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/entity/entity.hpp \
-  /usr/include/entt/srce/entt/entity/sparse_set.hpp \
-  /usr/include/entt/srce/entt/core/algorithm.hpp \
-  /usr/include/entt/srce/entt/core/any.hpp \
-  /usr/include/entt/srce/entt/core/memory.hpp \
-  /usr/include/entt/srce/entt/entity/storage.hpp \
-  /usr/include/entt/srce/entt/entity/component.hpp \
-  /usr/include/entt/srce/entt/entity/handle.hpp \
-  /usr/include/entt/srce/entt/entity/helper.hpp \
-  /usr/include/entt/srce/entt/signal/delegate.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/signal/fwd.hpp \
-  /usr/include/entt/srce/entt/entity/group.hpp \
-  /usr/include/entt/srce/entt/entity/view.hpp \
-  /usr/include/entt/srce/entt/entity/mixin.hpp \
-  /usr/include/entt/srce/entt/signal/sigh.hpp \
-  /usr/include/entt/srce/entt/signal/delegate.hpp \
-  /usr/include/entt/srce/entt/entity/observer.hpp \
-  /usr/include/entt/srce/entt/entity/organizer.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/graph/adjacency_matrix.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/graph/fwd.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/graph/flow.hpp \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/container/dense_set.hpp \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/graph/adjacency_matrix.hpp \
-  /usr/include/entt/srce/entt/entity/helper.hpp \
-  /usr/include/entt/srce/entt/entity/registry.hpp \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/entity/mixin.hpp \
-  /usr/include/entt/srce/entt/entity/runtime_view.hpp \
-  /usr/include/entt/srce/entt/entity/snapshot.hpp \
-  /usr/include/entt/srce/entt/entity/sparse_set.hpp \
-  /usr/include/entt/srce/entt/entity/storage.hpp \
-  /usr/include/entt/srce/entt/entity/view.hpp \
-  /usr/include/entt/srce/entt/graph/adjacency_matrix.hpp \
-  /usr/include/entt/srce/entt/graph/dot.hpp \
-  /usr/include/entt/srce/entt/graph/flow.hpp \
-  /usr/include/entt/srce/entt/locator/locator.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/meta/adl_pointer.hpp \
-  /usr/include/entt/srce/entt/meta/container.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/hashed_string.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/enum.hpp \
+  /usr/include/entt/core/family.hpp \
+  /usr/include/entt/core/hashed_string.hpp \
+  /usr/include/entt/core/ident.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/core/monostate.hpp \
+  /usr/include/entt/core/tuple.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/entity/component.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/entity/fwd.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/entity/entity.hpp \
+  /usr/include/entt/entity/group.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/entity/entity.hpp \
+  /usr/include/entt/entity/sparse_set.hpp \
+  /usr/include/entt/core/algorithm.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/entity/storage.hpp \
+  /usr/include/entt/entity/component.hpp \
+  /usr/include/entt/entity/handle.hpp \
+  /usr/include/entt/entity/helper.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/signal/fwd.hpp \
+  /usr/include/entt/entity/group.hpp \
+  /usr/include/entt/entity/view.hpp \
+  /usr/include/entt/entity/mixin.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/entity/observer.hpp \
+  /usr/include/entt/entity/organizer.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/graph/fwd.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/graph/flow.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/entity/helper.hpp \
+  /usr/include/entt/entity/registry.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/entity/mixin.hpp \
+  /usr/include/entt/entity/runtime_view.hpp \
+  /usr/include/entt/entity/snapshot.hpp \
+  /usr/include/entt/entity/sparse_set.hpp \
+  /usr/include/entt/entity/storage.hpp \
+  /usr/include/entt/entity/view.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/graph/dot.hpp \
+  /usr/include/entt/graph/flow.hpp \
+  /usr/include/entt/locator/locator.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/meta/adl_pointer.hpp \
+  /usr/include/entt/meta/container.hpp \
   /usr/include/c++/11/deque \
   /usr/include/c++/11/bits/stl_deque.h \
   /usr/include/c++/11/bits/deque.tcc \
@@ -1770,70 +2023,70 @@ CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: ../src/Scene/Scene.cpp \
   /usr/include/c++/11/bits/stl_multiset.h \
   /usr/include/c++/11/unordered_set \
   /usr/include/c++/11/bits/unordered_set.h \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/container/dense_set.hpp \
-  /usr/include/entt/srce/entt/meta/context.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/meta/meta.hpp \
-  /usr/include/entt/srce/entt/config/config.h \
-  /usr/include/entt/srce/entt/core/any.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/locator/locator.hpp \
-  /usr/include/entt/srce/entt/meta/adl_pointer.hpp \
-  /usr/include/entt/srce/entt/meta/fwd.hpp \
-  /usr/include/entt/srce/entt/meta/node.hpp \
-  /usr/include/entt/srce/entt/core/attribute.h \
-  /usr/include/entt/srce/entt/core/enum.hpp \
-  /usr/include/entt/srce/entt/meta/type_traits.hpp \
-  /usr/include/entt/srce/entt/meta/range.hpp \
-  /usr/include/entt/srce/entt/meta/context.hpp \
-  /usr/include/entt/srce/entt/meta/factory.hpp \
-  /usr/include/entt/srce/entt/meta/policy.hpp \
-  /usr/include/entt/srce/entt/meta/resolve.hpp \
-  /usr/include/entt/srce/entt/meta/utility.hpp \
-  /usr/include/entt/srce/entt/meta/meta.hpp \
-  /usr/include/entt/srce/entt/meta/node.hpp \
-  /usr/include/entt/srce/entt/meta/pointer.hpp \
-  /usr/include/entt/srce/entt/meta/policy.hpp \
-  /usr/include/entt/srce/entt/meta/range.hpp \
-  /usr/include/entt/srce/entt/meta/resolve.hpp \
-  /usr/include/entt/srce/entt/meta/template.hpp \
-  /usr/include/entt/srce/entt/meta/type_traits.hpp \
-  /usr/include/entt/srce/entt/meta/utility.hpp \
-  /usr/include/entt/srce/entt/platform/android-ndk-r17.hpp \
-  /usr/include/entt/srce/entt/poly/poly.hpp \
-  /usr/include/entt/srce/entt/core/any.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/type_traits.hpp \
-  /usr/include/entt/srce/entt/poly/fwd.hpp \
-  /usr/include/entt/srce/entt/process/process.hpp \
-  /usr/include/entt/srce/entt/process/scheduler.hpp \
-  /usr/include/entt/srce/entt/process/fwd.hpp \
-  /usr/include/entt/srce/entt/process/process.hpp \
-  /usr/include/entt/srce/entt/resource/cache.hpp \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/iterator.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/resource/fwd.hpp \
-  /usr/include/entt/srce/entt/resource/loader.hpp \
-  /usr/include/entt/srce/entt/resource/resource.hpp \
-  /usr/include/entt/srce/entt/resource/loader.hpp \
-  /usr/include/entt/srce/entt/resource/resource.hpp \
-  /usr/include/entt/srce/entt/signal/delegate.hpp \
-  /usr/include/entt/srce/entt/signal/dispatcher.hpp \
-  /usr/include/entt/srce/entt/container/dense_map.hpp \
-  /usr/include/entt/srce/entt/core/compressed_pair.hpp \
-  /usr/include/entt/srce/entt/core/fwd.hpp \
-  /usr/include/entt/srce/entt/core/type_info.hpp \
-  /usr/include/entt/srce/entt/core/utility.hpp \
-  /usr/include/entt/srce/entt/signal/sigh.hpp \
-  /usr/include/entt/srce/entt/signal/emitter.hpp \
-  /usr/include/entt/srce/entt/signal/sigh.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/meta/context.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/meta/meta.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/locator/locator.hpp \
+  /usr/include/entt/meta/adl_pointer.hpp \
+  /usr/include/entt/meta/fwd.hpp \
+  /usr/include/entt/meta/node.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/enum.hpp \
+  /usr/include/entt/meta/type_traits.hpp \
+  /usr/include/entt/meta/range.hpp \
+  /usr/include/entt/meta/context.hpp \
+  /usr/include/entt/meta/factory.hpp \
+  /usr/include/entt/meta/policy.hpp \
+  /usr/include/entt/meta/resolve.hpp \
+  /usr/include/entt/meta/utility.hpp \
+  /usr/include/entt/meta/meta.hpp \
+  /usr/include/entt/meta/node.hpp \
+  /usr/include/entt/meta/pointer.hpp \
+  /usr/include/entt/meta/policy.hpp \
+  /usr/include/entt/meta/range.hpp \
+  /usr/include/entt/meta/resolve.hpp \
+  /usr/include/entt/meta/template.hpp \
+  /usr/include/entt/meta/type_traits.hpp \
+  /usr/include/entt/meta/utility.hpp \
+  /usr/include/entt/platform/android-ndk-r17.hpp \
+  /usr/include/entt/poly/poly.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/poly/fwd.hpp \
+  /usr/include/entt/process/process.hpp \
+  /usr/include/entt/process/scheduler.hpp \
+  /usr/include/entt/process/fwd.hpp \
+  /usr/include/entt/process/process.hpp \
+  /usr/include/entt/resource/cache.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/resource/fwd.hpp \
+  /usr/include/entt/resource/loader.hpp \
+  /usr/include/entt/resource/resource.hpp \
+  /usr/include/entt/resource/loader.hpp \
+  /usr/include/entt/resource/resource.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/signal/dispatcher.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  /usr/include/entt/signal/emitter.hpp \
+  /usr/include/entt/signal/sigh.hpp \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc
@@ -2198,6 +2451,259 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/SDL_locale.h \
   /usr/include/SDL2/SDL_misc.h \
+  ../src/Scene/Scene.h \
+  /usr/include/entt/entt.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/config/version.h \
+  /usr/include/entt/config/macro.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  /usr/include/entt/config/macro.h \
+  /usr/include/entt/config/version.h \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/c++/11/cstddef \
+  /usr/include/c++/11/functional \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/bits/std_function.h \
+  /usr/include/c++/11/unordered_map \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/hashtable.h \
+  /usr/include/c++/11/bits/hashtable_policy.h \
+  /usr/include/c++/11/bits/enable_special_members.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/unordered_map.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/iterator \
+  /usr/include/c++/11/bits/stream_iterator.h \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/bits/atomic_wait.h \
+  /usr/include/c++/11/climits \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/syscall.h \
+  /usr/include/x86_64-linux-gnu/sys/syscall.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
+  /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/c++/11/bits/ranges_uninitialized.h \
+  /usr/include/c++/11/bits/ranges_algobase.h \
+  /usr/include/c++/11/bits/uses_allocator_args.h \
+  /usr/include/c++/11/pstl/glue_memory_defs.h \
+  /usr/include/c++/11/pstl/execution_defs.h \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/container/fwd.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/core/algorithm.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/ranges_algo.h \
+  /usr/include/c++/11/bits/ranges_util.h \
+  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/hashed_string.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/enum.hpp \
+  /usr/include/entt/core/family.hpp \
+  /usr/include/entt/core/hashed_string.hpp \
+  /usr/include/entt/core/ident.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/core/monostate.hpp \
+  /usr/include/entt/core/tuple.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/entity/component.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/entity/fwd.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/entity/entity.hpp \
+  /usr/include/entt/entity/group.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/entity/entity.hpp \
+  /usr/include/entt/entity/sparse_set.hpp \
+  /usr/include/entt/core/algorithm.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/memory.hpp \
+  /usr/include/entt/entity/storage.hpp \
+  /usr/include/entt/entity/component.hpp \
+  /usr/include/entt/entity/handle.hpp \
+  /usr/include/entt/entity/helper.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/signal/fwd.hpp \
+  /usr/include/entt/entity/group.hpp \
+  /usr/include/entt/entity/view.hpp \
+  /usr/include/entt/entity/mixin.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/entity/observer.hpp \
+  /usr/include/entt/entity/organizer.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/graph/fwd.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/graph/flow.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/entity/helper.hpp \
+  /usr/include/entt/entity/registry.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/entity/mixin.hpp \
+  /usr/include/entt/entity/runtime_view.hpp \
+  /usr/include/entt/entity/snapshot.hpp \
+  /usr/include/entt/entity/sparse_set.hpp \
+  /usr/include/entt/entity/storage.hpp \
+  /usr/include/entt/entity/view.hpp \
+  /usr/include/entt/graph/adjacency_matrix.hpp \
+  /usr/include/entt/graph/dot.hpp \
+  /usr/include/entt/graph/flow.hpp \
+  /usr/include/entt/locator/locator.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/meta/adl_pointer.hpp \
+  /usr/include/entt/meta/container.hpp \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/set \
+  /usr/include/c++/11/bits/stl_set.h \
+  /usr/include/c++/11/bits/stl_multiset.h \
+  /usr/include/c++/11/unordered_set \
+  /usr/include/c++/11/bits/unordered_set.h \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/container/dense_set.hpp \
+  /usr/include/entt/meta/context.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/meta/meta.hpp \
+  /usr/include/entt/config/config.h \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/locator/locator.hpp \
+  /usr/include/entt/meta/adl_pointer.hpp \
+  /usr/include/entt/meta/fwd.hpp \
+  /usr/include/entt/meta/node.hpp \
+  /usr/include/entt/core/attribute.h \
+  /usr/include/entt/core/enum.hpp \
+  /usr/include/entt/meta/type_traits.hpp \
+  /usr/include/entt/meta/range.hpp \
+  /usr/include/entt/meta/context.hpp \
+  /usr/include/entt/meta/factory.hpp \
+  /usr/include/entt/meta/policy.hpp \
+  /usr/include/entt/meta/resolve.hpp \
+  /usr/include/entt/meta/utility.hpp \
+  /usr/include/entt/meta/meta.hpp \
+  /usr/include/entt/meta/node.hpp \
+  /usr/include/entt/meta/pointer.hpp \
+  /usr/include/entt/meta/policy.hpp \
+  /usr/include/entt/meta/range.hpp \
+  /usr/include/entt/meta/resolve.hpp \
+  /usr/include/entt/meta/template.hpp \
+  /usr/include/entt/meta/type_traits.hpp \
+  /usr/include/entt/meta/utility.hpp \
+  /usr/include/entt/platform/android-ndk-r17.hpp \
+  /usr/include/entt/poly/poly.hpp \
+  /usr/include/entt/core/any.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/type_traits.hpp \
+  /usr/include/entt/poly/fwd.hpp \
+  /usr/include/entt/process/process.hpp \
+  /usr/include/entt/process/scheduler.hpp \
+  /usr/include/entt/process/fwd.hpp \
+  /usr/include/entt/process/process.hpp \
+  /usr/include/entt/resource/cache.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/iterator.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/resource/fwd.hpp \
+  /usr/include/entt/resource/loader.hpp \
+  /usr/include/entt/resource/resource.hpp \
+  /usr/include/entt/resource/loader.hpp \
+  /usr/include/entt/resource/resource.hpp \
+  /usr/include/entt/signal/delegate.hpp \
+  /usr/include/entt/signal/dispatcher.hpp \
+  /usr/include/entt/container/dense_map.hpp \
+  /usr/include/entt/core/compressed_pair.hpp \
+  /usr/include/entt/core/fwd.hpp \
+  /usr/include/entt/core/type_info.hpp \
+  /usr/include/entt/core/utility.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  /usr/include/entt/signal/emitter.hpp \
+  /usr/include/entt/signal/sigh.hpp \
+  ../src/ECS/SystemTypes/SetupSystem.h \
+  ../src/ECS/System.h \
+  ../src/ECS/SystemTypes/EventSystem.h \
+  ../src/ECS/SystemTypes/UpdateSystem.h \
+  ../src/ECS/SystemTypes/RenderSystem.h \
   ../src/CustomObj/objRect.h
 
 
@@ -2206,6 +2712,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/glm/detail/type_half.hpp:
 
 /usr/include/glm/packing.hpp:
+
+/usr/include/glm/trigonometric.hpp:
 
 /usr/include/glm/ext/matrix_float2x2_precision.hpp:
 
@@ -2220,8 +2728,6 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/glm/detail/type_vec1.inl:
 
 /usr/include/glm/detail/type_vec1.hpp:
-
-/usr/include/glm/detail/func_geometric.inl:
 
 /usr/include/glm/geometric.hpp:
 
@@ -2265,6 +2771,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/glm/ext/matrix_float3x3.hpp:
 
+/usr/include/glm/ext/matrix_double3x3_precision.hpp:
+
 /usr/include/glm/detail/type_mat3x3.inl:
 
 /usr/include/glm/exponential.hpp:
@@ -2274,6 +2782,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/glm/ext/matrix_float3x2_precision.hpp:
 
 /usr/include/glm/detail/type_mat3x2.inl:
+
+/usr/include/glm/detail/type_mat3x2.hpp:
 
 /usr/include/glm/ext/matrix_double3x2.hpp:
 
@@ -2286,8 +2796,6 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/glm/detail/type_mat2x4.hpp:
 
 /usr/include/glm/ext/matrix_float2x3_precision.hpp:
-
-/usr/include/glm/ext/matrix_double2x3_precision.hpp:
 
 /usr/include/glm/detail/type_mat2x3.inl:
 
@@ -2325,17 +2833,27 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/glm/detail/type_vec3.inl:
 
+/usr/include/glm/detail/type_vec3.hpp:
+
 /usr/include/glm/ext/scalar_int_sized.hpp:
 
 /usr/include/glm/ext/vector_int2.hpp:
 
 /usr/include/glm/ext/vector_double2_precision.hpp:
 
+/usr/include/glm/ext/vector_float2_precision.hpp:
+
+/usr/include/glm/ext/vector_float2.hpp:
+
+/usr/include/glm/ext/vector_bool2_precision.hpp:
+
+/usr/include/glm/detail/type_vec2.inl:
+
+/usr/include/SDL2/SDL_render.h:
+
 /usr/include/SDL2/SDL_power.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512bitalgintrin.h:
-
-/usr/include/entt/srce/entt/process/scheduler.hpp:
 
 /usr/include/SDL2/SDL_metal.h:
 
@@ -2353,6 +2871,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 ../src/Game/Game.h:
 
+/usr/include/entt/core/enum.hpp:
+
 /usr/include/c++/11/bits/stl_map.h:
 
 /usr/include/SDL2/SDL_mouse.h:
@@ -2369,21 +2889,17 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512bf16intrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/vpclmulqdqintrin.h:
+/usr/include/entt/entity/fwd.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/usr/include/SDL2/SDL_filesystem.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vp2intersectintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vpopcntdqvlintrin.h:
 
 /usr/include/c++/11/exception:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vnnivlintrin.h:
-
-/usr/include/entt/srce/entt/signal/emitter.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/keylockerintrin.h:
 
@@ -2401,6 +2917,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/alloca.h:
 
+../src/Scene/Scene.h:
+
 /usr/include/glm/vec3.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512ifmaintrin.h:
@@ -2410,6 +2928,10 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512bwintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+../src/ECS/System.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512cdintrin.h:
 
@@ -2431,6 +2953,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/erase_if.h:
 
+/usr/include/entt/core/tuple.hpp:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/wmmintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/smmintrin.h:
@@ -2441,7 +2965,7 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/initializer_list:
 
-/usr/include/entt/srce/entt/entity/component.hpp:
+/usr/include/entt/poly/fwd.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/tmmintrin.h:
 
@@ -2458,6 +2982,10 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/glm/ext/vector_uint2.hpp:
 
 /usr/include/c++/11/cstdint:
+
+/usr/include/entt/container/dense_map.hpp:
+
+/usr/include/entt/meta/fwd.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/xsavecintrin.h:
 
@@ -2489,8 +3017,6 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/movdirintrin.h:
 
-/usr/include/entt/srce/entt/core/fwd.hpp:
-
 /usr/include/glm/detail/type_vec4.hpp:
 
 /usr/include/glm/simd/platform.h:
@@ -2521,19 +3047,23 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/SDL2/SDL_cpuinfo.h:
 
+/usr/include/glm/ext/matrix_double2x3_precision.hpp:
+
+/usr/include/entt/graph/fwd.hpp:
+
 /usr/include/SDL2/SDL_error.h:
 
 /usr/include/SDL2/SDL_atomic.h:
 
 /usr/include/c++/11/cstdlib:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+
 /usr/include/SDL2/SDL_gesture.h:
 
 /usr/include/ctype.h:
 
 /usr/include/c++/11/tr1/poly_hermite.tcc:
-
-/usr/include/entt/srce/entt/entity/observer.hpp:
 
 /usr/include/SDL2/SDL_clipboard.h:
 
@@ -2556,6 +3086,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/SDL2/SDL_rect.h:
 
 /usr/include/SDL2/SDL_video.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/c++/11/iterator:
 
@@ -2591,6 +3123,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 ../src/Game/Game.cpp:
 
+../src/ECS/SystemTypes/EventSystem.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/11/backward/auto_ptr.h:
@@ -2615,10 +3149,6 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/waitpkgintrin.h:
 
-/usr/include/entt/srce/entt/meta/range.hpp:
-
-/usr/include/entt/srce/entt/signal/dispatcher.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
@@ -2627,19 +3157,15 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/include/entt/srce/entt/graph/flow.hpp:
-
 /usr/include/string.h:
 
-/usr/include/glm/vec4.hpp:
-
-/usr/include/c++/11/bits/stl_iterator_base_funcs.h:
-
-/usr/include/c++/11/bits/streambuf.tcc:
+/usr/include/entt/core/type_traits.hpp:
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
 
 /usr/include/c++/11/bits/shared_ptr.h:
+
+/usr/include/entt/meta/pointer.hpp:
 
 /usr/include/features.h:
 
@@ -2650,6 +3176,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/pstl/execution_defs.h:
 
 /usr/include/SDL2/SDL_hints.h:
+
+/usr/include/entt/entity/group.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/rdseedintrin.h:
 
@@ -2669,10 +3197,6 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
-/usr/include/entt/srce/entt/core/type_info.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/avx5124fmapsintrin.h:
-
 /usr/include/SDL2/SDL_stdinc.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
@@ -2681,7 +3205,11 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_iterator.h:
 
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
+
 /usr/include/c++/11/bits/std_mutex.h:
+
+/usr/include/glm/ext/vector_bool2.hpp:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
@@ -2690,6 +3218,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/SDL2/SDL.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/entt/meta/meta.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512bf16vlintrin.h:
 
@@ -2707,15 +3237,13 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avxintrin.h:
 
+/usr/include/entt/meta/container.hpp:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/entt/srce/entt/graph/adjacency_matrix.hpp:
-
 /usr/include/SDL2/SDL_haptic.h:
-
-/usr/include/SDL2/SDL_quit.h:
 
 /usr/include/glm/detail/type_mat2x2.hpp:
 
@@ -2725,13 +3253,21 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
+/usr/include/glm/ext/matrix_double4x2_precision.hpp:
+
+/usr/include/glm/detail/type_mat3x3.hpp:
+
+/usr/include/c++/11/ext/type_traits.h:
+
+/usr/include/entt/core/attribute.h:
+
 /usr/include/c++/11/bits/ranges_util.h:
 
 /usr/include/SDL2/SDL_events.h:
 
-/usr/include/c++/11/bits/basic_ios.tcc:
-
 /usr/include/c++/11/bits/enable_special_members.h:
+
+/usr/include/c++/11/bits/basic_ios.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
@@ -2749,9 +3285,7 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avxvnniintrin.h:
 
-/usr/include/c++/11/cctype:
-
-/usr/include/entt/srce/entt/entity/storage.hpp:
+/usr/include/entt/entity/helper.hpp:
 
 /usr/include/SDL2/SDL_timer.h:
 
@@ -2767,19 +3301,17 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/debug/assertions.h:
 
-/usr/include/entt/srce/entt/entity/registry.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/c++/11/bits/ostream_insert.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/xsaveintrin.h:
 
+/usr/include/entt/meta/utility.hpp:
+
 /usr/include/c++/11/bits/stringfwd.h:
 
 ../src/CustomObj/objRect.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/glm/detail/qualifier.hpp:
 
@@ -2792,6 +3324,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/c++/11/unordered_set:
 
 /usr/include/glm/detail/func_packing.inl:
 
@@ -2809,9 +3343,7 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/inttypes.h:
 
-/usr/include/SDL2/SDL_rwops.h:
-
-/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+/usr/include/entt/platform/android-ndk-r17.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
@@ -2822,6 +3354,10 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+../src/ECS/SystemTypes/RenderSystem.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -2835,11 +3371,9 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/bmi2intrin.h:
 
-/usr/include/c++/11/stdlib.h:
-
-/usr/include/glm/ext/vector_bool2_precision.hpp:
-
 /usr/include/c++/11/bits/invoke.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/lwpintrin.h:
 
@@ -2851,9 +3385,7 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/usr/include/glm/ext/vector_bool2.hpp:
-
-/usr/include/entt/srce/entt/meta/meta.hpp:
+/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
 /usr/include/glm/ext/vector_bool4_precision.hpp:
 
@@ -2865,17 +3397,11 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/SDL2/SDL_assert.h:
 
-/usr/include/c++/11/tr1/poly_laguerre.tcc:
-
-/usr/include/entt/srce/entt/config/macro.h:
-
 /usr/include/stdlib.h:
 
 /usr/include/c++/11/tr1/special_function_util.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/ia32intrin.h:
-
-/usr/include/entt/srce/entt/container/dense_set.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
@@ -2884,16 +3410,6 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/lib/gcc/x86_64-linux-gnu/11/include/xtestintrin.h:
 
 /usr/include/c++/11/bits/concept_check.h:
-
-/usr/include/glm/ext/matrix_double2x4_precision.hpp:
-
-/usr/include/SDL2/SDL_pixels.h:
-
-/usr/include/c++/11/system_error:
-
-/usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
@@ -2923,21 +3439,23 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/uintrintrin.h:
 
+/usr/include/glm/detail/func_geometric.inl:
+
+/usr/include/entt/locator/locator.hpp:
+
+/usr/include/entt/entity/snapshot.hpp:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/xsavesintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/c++/11/iostream:
 
 /usr/include/glm/detail/type_mat4x3.inl:
 
 /usr/include/c++/11/bits/node_handle.h:
 
-/usr/include/SDL2/SDL_render.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/include/entt/srce/entt/platform/android-ndk-r17.hpp:
+/usr/include/c++/11/iostream:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/pmmintrin.h:
 
@@ -2957,25 +3475,19 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/math.h:
 
+../src/ECS/SystemTypes/UpdateSystem.h:
+
+/usr/include/c++/11/cmath:
+
 /usr/include/glm/detail/func_integer.inl:
 
 /usr/include/c++/11/bits/allocator.h:
 
+/usr/include/entt/meta/factory.hpp:
+
 /usr/include/glm/detail/type_vec4.inl:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/gfniintrin.h:
-
-/usr/include/entt/srce/entt/meta/fwd.hpp:
-
-/usr/include/entt/srce/entt/core/utility.hpp:
-
-/usr/include/glm/ext/matrix_double4x2_precision.hpp:
-
-/usr/include/glm/detail/type_mat3x3.hpp:
-
-/usr/include/c++/11/ext/type_traits.h:
-
-/usr/include/entt/srce/entt/core/tuple.hpp:
 
 /usr/include/glm/matrix.hpp:
 
@@ -2986,8 +3498,6 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/glm/glm.hpp:
 
 /usr/include/glm/ext/scalar_uint_sized.hpp:
-
-/usr/include/entt/srce/entt/meta/type_traits.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
@@ -3001,8 +3511,6 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/SDL2/SDL_surface.h:
 
-/usr/include/entt/srce/entt/meta/context.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
 /usr/include/c++/11/bits/postypes.h:
@@ -3010,8 +3518,6 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/stl_list.h:
 
 /usr/include/c++/11/bits/specfun.h:
-
-/usr/include/entt/srce/entt/resource/loader.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/immintrin.h:
 
@@ -3033,6 +3539,8 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/hash_bytes.h:
 
+/usr/include/entt/config/macro.h:
+
 /usr/include/SDL2/SDL_messagebox.h:
 
 /usr/include/glm/ext/vector_float4.hpp:
@@ -3053,7 +3561,13 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/memoryfwd.h:
 
+/usr/include/entt/meta/range.hpp:
+
 /usr/include/c++/11/bits/stl_function.h:
+
+/usr/include/c++/11/stdlib.h:
+
+/usr/include/entt/meta/resolve.hpp:
 
 /usr/include/SDL2/SDL_audio.h:
 
@@ -3077,35 +3591,35 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
+/usr/include/glm/vec4.hpp:
+
+/usr/include/c++/11/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/11/bits/streambuf.tcc:
+
+/usr/include/entt/signal/dispatcher.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/c++/11/bits/char_traits.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/fmaintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512erintrin.h:
-
-/usr/include/c++/11/cwchar:
 
 /usr/include/c++/11/ext/new_allocator.h:
 
 /usr/include/c++/11/bits/localefwd.h:
 
+../src/ECS/SystemTypes/SetupSystem.h:
+
 /usr/include/c++/11/clocale:
+
+/usr/include/entt/meta/policy.hpp:
 
 /usr/include/c++/11/numbers:
 
 /usr/include/locale.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-/usr/include/entt/srce/entt/meta/template.hpp:
-
 /usr/include/c++/11/backward/binders.h:
 
 /usr/include/c++/11/bits/stl_algo.h:
-
-/usr/include/c++/11/bits/stl_tempbuf.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -3137,35 +3651,27 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/ext/alloc_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
 /usr/include/asm-generic/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+/usr/include/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
-
-/usr/include/entt/srce/entt/meta/adl_pointer.hpp:
-
 /usr/include/c++/11/bits/functional_hash.h:
 
-/usr/include/c++/11/bits/max_size_type.h:
+/usr/include/glm/detail/type_half.inl:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mwaitxintrin.h:
+
+/usr/include/c++/11/bits/ranges_uninitialized.h:
+
+/usr/include/entt/entity/storage.hpp:
 
 /usr/include/c++/11/bits/align.h:
-
-/usr/include/glm/ext/matrix_double3x3_precision.hpp:
-
-/usr/include/entt/srce/entt/core/monostate.hpp:
-
-/usr/include/entt/srce/entt/graph/fwd.hpp:
 
 /usr/include/c++/11/bits/string_view.tcc:
 
@@ -3174,6 +3680,18 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/ext/string_conversions.h:
 
 /usr/include/c++/11/cstdio:
+
+/usr/include/entt/signal/fwd.hpp:
+
+/usr/include/SDL2/close_code.h:
+
+/usr/include/c++/11/bits/alloc_traits.h:
+
+/usr/include/errno.h:
+
+/usr/include/SDL2/SDL_quit.h:
+
+/usr/include/entt/core/memory.hpp:
 
 /usr/include/glm/ext/matrix_float2x4_precision.hpp:
 
@@ -3193,85 +3711,43 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/asm-generic/errno-base.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/hresetintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+/usr/include/entt/graph/dot.hpp:
 
 /usr/include/c++/11/bits/basic_string.tcc:
 
-/usr/include/c++/11/ostream:
+/usr/include/entt/entt.hpp:
 
-/usr/include/c++/11/ios:
+/usr/include/SDL2/SDL_filesystem.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/entt/config/config.h:
+
+/usr/include/entt/config/version.h:
+
+/usr/include/c++/11/tuple:
+
+/usr/include/c++/11/utility:
 
 /usr/include/c++/11/tr1/ell_integral.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
-/usr/include/glm/ext/matrix_float2x3.hpp:
+/usr/include/c++/11/ios:
 
-/usr/include/c++/11/bits/cxxabi_init_exception.h:
+/usr/include/entt/core/type_info.hpp:
 
-/usr/include/entt/srce/entt/meta/factory.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512pfintrin.h:
 
-/usr/include/c++/11/bits/nested_exception.h:
-
-/usr/include/c++/11/bits/ios_base.h:
-
-/usr/include/c++/11/bits/locale_classes.h:
-
-/usr/include/c++/11/ext/aligned_buffer.h:
-
-/usr/include/c++/11/bits/locale_classes.tcc:
-
-/usr/include/entt/srce/entt/meta/container.hpp:
-
-/usr/include/c++/11/stdexcept:
-
-/usr/include/c++/11/pstl/glue_algorithm_defs.h:
-
-/usr/include/SDL2/SDL_endian.h:
-
-/usr/include/c++/11/streambuf:
-
-/usr/include/c++/11/cwctype:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
-
-/usr/include/c++/11/istream:
-
-/usr/include/c++/11/bits/istream.tcc:
-
-/usr/include/glm/detail/type_vec2.hpp:
-
-../src/Pong/Pong.h:
-
-/usr/include/c++/11/algorithm:
-
-/usr/include/time.h:
-
-/usr/include/entt/srce/entt/entt.hpp:
-
-/usr/include/c++/11/bit:
-
-/usr/include/entt/srce/entt/signal/delegate.hpp:
-
-/usr/include/entt/srce/entt/config/config.h:
-
-/usr/include/entt/srce/entt/core/attribute.h:
-
-/usr/include/entt/srce/entt/container/dense_map.hpp:
-
-/usr/include/c++/11/tuple:
-
-/usr/include/entt/srce/entt/meta/node.hpp:
+/usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/limits.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
 /usr/include/c++/11/bits/refwrap.h:
+
+/usr/include/entt/process/fwd.hpp:
 
 /usr/include/c++/11/unordered_map:
 
@@ -3283,21 +3759,73 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
+/usr/include/entt/resource/resource.hpp:
+
 /usr/include/c++/11/bits/stream_iterator.h:
 
-/usr/include/c++/11/cmath:
+/usr/include/SDL2/SDL_endian.h:
 
-/usr/include/entt/srce/entt/entity/organizer.hpp:
+/usr/include/c++/11/streambuf:
+
+/usr/include/c++/11/bits/ios_base.h:
+
+/usr/include/c++/11/bits/locale_classes.h:
+
+/usr/include/c++/11/ext/aligned_buffer.h:
+
+/usr/include/c++/11/bits/locale_classes.tcc:
+
+/usr/include/c++/11/stdexcept:
+
+/usr/include/c++/11/pstl/glue_algorithm_defs.h:
+
+/usr/include/glm/ext/matrix_float4x4_precision.hpp:
+
+/usr/include/math.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
+
+/usr/include/c++/11/bits/charconv.h:
+
+/usr/include/c++/11/bits/exception_ptr.h:
+
+/usr/include/entt/core/family.hpp:
+
+/usr/include/glm/ext/matrix_float2x3.hpp:
+
+/usr/include/c++/11/bits/cxxabi_init_exception.h:
+
+/usr/include/entt/core/algorithm.hpp:
+
+/usr/include/c++/11/bits/nested_exception.h:
 
 /usr/include/glm/ext/matrix_double2x4.hpp:
 
 /usr/include/c++/11/memory:
 
-/usr/include/entt/srce/entt/core/type_traits.hpp:
+/usr/include/entt/meta/context.hpp:
 
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
+/usr/include/c++/11/bit:
+
 /usr/include/c++/11/bits/unique_ptr.h:
+
+/usr/include/entt/process/scheduler.hpp:
+
+/usr/include/c++/11/ostream:
+
+/usr/include/entt/container/fwd.hpp:
+
+/usr/include/entt/entity/registry.hpp:
+
+/usr/include/c++/11/cwctype:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/assert.h:
 
@@ -3319,17 +3847,13 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
+/usr/include/entt/core/utility.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
-/usr/include/glm/detail/type_vec2.inl:
-
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/usr/include/c++/11/bits/ranges_algobase.h:
 
 /usr/include/c++/11/bits/functexcept.h:
 
@@ -3337,15 +3861,19 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
+/usr/include/SDL2/SDL_touch.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/c++/11/cctype:
+
+/usr/include/entt/meta/adl_pointer.hpp:
+
 /usr/include/syscall.h:
 
 /usr/include/c++/11/bits/stl_tree.h:
 
 /usr/include/x86_64-linux-gnu/asm/unistd_64.h:
-
-/usr/include/entt/srce/entt/locator/locator.hpp:
-
-/usr/include/entt/srce/entt/resource/cache.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/syscall.h:
 
@@ -3361,93 +3889,83 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/pstl/glue_memory_defs.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
-../src/Pong/Pong.cpp:
+/usr/include/entt/core/compressed_pair.hpp:
 
-/usr/include/entt/srce/entt/core/iterator.hpp:
+/usr/include/entt/core/fwd.hpp:
 
-/usr/include/entt/srce/entt/core/memory.hpp:
+/usr/include/entt/core/iterator.hpp:
 
-/usr/include/SDL2/SDL_touch.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/fmaintrin.h:
 
-/usr/include/linux/close_range.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512erintrin.h:
 
-/usr/include/entt/srce/entt/container/fwd.hpp:
+/usr/include/c++/11/cwchar:
 
-/usr/include/entt/srce/entt/core/algorithm.hpp:
+/usr/include/entt/container/dense_set.hpp:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+/usr/include/c++/11/algorithm:
 
-/usr/include/entt/srce/entt/core/any.hpp:
+../src/Pong/Pong.h:
 
-../src/Scene/Scene.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/usr/include/entt/srce/entt/core/enum.hpp:
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
-/usr/include/glm/detail/type_vec3.hpp:
+/usr/include/entt/core/any.hpp:
 
-/usr/include/entt/srce/entt/core/family.hpp:
+/usr/include/entt/graph/flow.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/c++/11/bits/ranges_algobase.h:
+
+/usr/include/entt/core/hashed_string.hpp:
+
+/usr/include/entt/core/ident.hpp:
+
+/usr/include/entt/core/monostate.hpp:
+
+/usr/include/entt/entity/component.hpp:
+
+/usr/include/entt/entity/entity.hpp:
+
+/usr/include/entt/entity/sparse_set.hpp:
+
+/usr/include/glm/detail/_fixes.hpp:
+
+/usr/include/SDL2/SDL_rwops.h:
+
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/entt/entity/view.hpp:
+
+/usr/include/entt/signal/delegate.hpp:
 
 /usr/include/c++/11/bits/deque.tcc:
 
-/usr/include/entt/srce/entt/core/compressed_pair.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/vpclmulqdqintrin.h:
 
-/usr/include/entt/srce/entt/entity/fwd.hpp:
+/usr/include/entt/entity/mixin.hpp:
 
-/usr/include/entt/srce/entt/entity/entity.hpp:
+/usr/include/entt/graph/adjacency_matrix.hpp:
 
-/usr/include/c++/11/utility:
+/usr/include/entt/entity/handle.hpp:
 
-/usr/include/entt/srce/entt/entity/group.hpp:
+/usr/include/glm/detail/setup.hpp:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vp2intersectintrin.h:
+/usr/include/entt/signal/sigh.hpp:
 
-/usr/include/entt/srce/entt/resource/fwd.hpp:
+/usr/include/entt/entity/observer.hpp:
 
-/usr/include/entt/srce/entt/core/hashed_string.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/hresetintrin.h:
 
-/usr/include/entt/srce/entt/entity/sparse_set.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
-/usr/include/glm/detail/type_mat3x2.hpp:
+/usr/include/entt/entity/organizer.hpp:
 
-/usr/include/entt/srce/entt/entity/handle.hpp:
-
-/usr/include/glm/ext/matrix_float4x4_precision.hpp:
-
-/usr/include/math.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
-
-/usr/include/c++/11/bits/charconv.h:
-
-/usr/include/c++/11/bits/exception_ptr.h:
-
-/usr/include/entt/srce/entt/signal/sigh.hpp:
-
-/usr/include/entt/srce/entt/entity/helper.hpp:
-
-/usr/include/entt/srce/entt/signal/fwd.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
-
-/usr/include/entt/srce/entt/core/ident.hpp:
-
-/usr/include/entt/srce/entt/entity/view.hpp:
-
-/usr/include/entt/srce/entt/entity/mixin.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/entt/srce/entt/entity/runtime_view.hpp:
-
-/usr/include/glm/trigonometric.hpp:
-
-/usr/include/entt/srce/entt/graph/dot.hpp:
-
-/usr/include/entt/srce/entt/entity/snapshot.hpp:
+/usr/include/entt/entity/runtime_view.hpp:
 
 /usr/include/c++/11/deque:
 
@@ -3467,45 +3985,51 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/unordered_set.h:
 
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+/usr/include/glm/ext/matrix_double2x4_precision.hpp:
 
-/usr/include/entt/srce/entt/meta/policy.hpp:
+/usr/include/SDL2/SDL_pixels.h:
 
-/usr/include/entt/srce/entt/meta/resolve.hpp:
+/usr/include/c++/11/system_error:
 
-/usr/include/entt/srce/entt/config/version.h:
+/usr/include/features-time64.h:
 
-/usr/include/entt/srce/entt/meta/utility.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/usr/include/entt/srce/entt/meta/pointer.hpp:
+/usr/include/entt/meta/node.hpp:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512pfintrin.h:
+/usr/include/c++/11/bits/stl_tempbuf.h:
 
-/usr/include/c++/11/bits/stl_relops.h:
+/usr/include/entt/meta/type_traits.hpp:
 
-/usr/include/entt/srce/entt/poly/poly.hpp:
+/usr/include/c++/11/bits/max_size_type.h:
 
-/usr/include/SDL2/close_code.h:
+/usr/include/entt/meta/template.hpp:
 
-/usr/include/c++/11/bits/alloc_traits.h:
+/usr/include/entt/poly/poly.hpp:
 
-/usr/include/errno.h:
+/usr/include/entt/process/process.hpp:
 
-/usr/include/entt/srce/entt/poly/fwd.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/avx5124fmapsintrin.h:
 
-/usr/include/c++/11/unordered_set:
+/usr/include/entt/resource/cache.hpp:
 
-/usr/include/entt/srce/entt/process/process.hpp:
+/usr/include/entt/resource/fwd.hpp:
 
-/usr/include/entt/srce/entt/process/fwd.hpp:
+/usr/include/entt/resource/loader.hpp:
 
-/usr/include/glm/detail/type_half.inl:
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/mwaitxintrin.h:
+/usr/include/entt/signal/emitter.hpp:
 
-/usr/include/c++/11/bits/ranges_uninitialized.h:
+/usr/include/c++/11/bits/istream.tcc:
 
-/usr/include/entt/srce/entt/resource/resource.hpp:
+/usr/include/c++/11/istream:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+../src/Pong/Pong.cpp:
+
+/usr/include/glm/detail/type_vec2.hpp:
 
 /usr/include/c++/11/bits/ranges_algo.h:
 
@@ -3515,12 +4039,4 @@ CMakeFiles/GEA.dir/src/main.cpp.o: ../src/main.cpp \
 
 ../src/ECS/Components.h:
 
-/usr/include/glm/detail/_fixes.hpp:
-
-/usr/include/glm/detail/setup.hpp:
-
 /usr/include/glm/fwd.hpp:
-
-/usr/include/glm/ext/vector_float2.hpp:
-
-/usr/include/glm/ext/vector_float2_precision.hpp:
