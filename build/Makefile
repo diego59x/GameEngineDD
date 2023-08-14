@@ -130,30 +130,6 @@ GEA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/build
 .PHONY : GEA/fast
 
-src/CustomObj/objRect.o: src/CustomObj/objRect.cpp.o
-.PHONY : src/CustomObj/objRect.o
-
-# target to build an object file
-src/CustomObj/objRect.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/CustomObj/objRect.cpp.o
-.PHONY : src/CustomObj/objRect.cpp.o
-
-src/CustomObj/objRect.i: src/CustomObj/objRect.cpp.i
-.PHONY : src/CustomObj/objRect.i
-
-# target to preprocess a source file
-src/CustomObj/objRect.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/CustomObj/objRect.cpp.i
-.PHONY : src/CustomObj/objRect.cpp.i
-
-src/CustomObj/objRect.s: src/CustomObj/objRect.cpp.s
-.PHONY : src/CustomObj/objRect.s
-
-# target to generate assembly for a file
-src/CustomObj/objRect.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/CustomObj/objRect.cpp.s
-.PHONY : src/CustomObj/objRect.cpp.s
-
 src/Game/Game.o: src/Game/Game.cpp.o
 .PHONY : src/Game/Game.o
 
@@ -259,9 +235,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GEA"
-	@echo "... src/CustomObj/objRect.o"
-	@echo "... src/CustomObj/objRect.i"
-	@echo "... src/CustomObj/objRect.s"
 	@echo "... src/Game/Game.o"
 	@echo "... src/Game/Game.i"
 	@echo "... src/Game/Game.s"

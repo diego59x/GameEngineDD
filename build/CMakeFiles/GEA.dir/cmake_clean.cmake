@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GEA.dir/src/CustomObj/objRect.cpp.o"
-  "CMakeFiles/GEA.dir/src/CustomObj/objRect.cpp.o.d"
   "CMakeFiles/GEA.dir/src/Game/Game.cpp.o"
   "CMakeFiles/GEA.dir/src/Game/Game.cpp.o.d"
   "CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o"

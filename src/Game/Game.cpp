@@ -21,7 +21,7 @@ Game::Game(const char* name, int width, int height)
 }
 
 Game::~Game() {
-    SDL_DestroyWindow(window);
+  SDL_DestroyWindow(window);
 }
 
 void Game::setScene(Scene* newScene) {
@@ -30,54 +30,46 @@ void Game::setScene(Scene* newScene) {
 }
 
 void Game::update() {
-    currentScene->update(dT);
+  currentScene->update(dT);
 }
 
-// void Game::handleEvents() {
-//     SDL_Event event;
-//     while (SDL_PollEvent(&event)) {
-//         if (event.type == SDL_QUIT) {
-//             isRunning = false;
-//         }
-//     }
-// }
 void Game::frameStart() {
-    frameStartTimestamp = SDL_GetTicks();
+  frameStartTimestamp = SDL_GetTicks();
 
-    if (frameEndTimestamp) {
-        dT = (frameStartTimestamp - frameEndTimestamp) / 1000.0f;
-    } else {
-        dT = 0;
-    }
+  if (frameEndTimestamp) {
+    dT = (frameStartTimestamp - frameEndTimestamp) / 1000.0f;
+  } else {
+    dT = 0;
+  }
 }
 
 void Game::frameEnd() {
-    frameEndTimestamp = SDL_GetTicks();
+  frameEndTimestamp = SDL_GetTicks();
 
-    // Delay
-    float actualFrameDuration = frameEndTimestamp - frameStartTimestamp;
-    if (actualFrameDuration < frameDuration) {
-        SDL_Delay(frameDuration - actualFrameDuration);
-    }
-    frameCount++;
-    framesCountPerSecond++;
-    uint32_t currentTime = SDL_GetTicks();
-    uint32_t timeElapsed = currentTime - lastFPSUpdate;
-    if (timeElapsed > 1000) {
-        FPS = framesCountPerSecond / (timeElapsed / 1000);
-        lastFPSUpdate = currentTime;
-        framesCountPerSecond = 0;
-    }
+  // Delay
+  float actualFrameDuration = frameEndTimestamp - frameStartTimestamp;
+  if (actualFrameDuration < frameDuration) {
+    SDL_Delay(frameDuration - actualFrameDuration);
+  }
+  frameCount++;
+  framesCountPerSecond++;
+  uint32_t currentTime = SDL_GetTicks();
+  uint32_t timeElapsed = currentTime - lastFPSUpdate;
+  if (timeElapsed > 1000) {
+    FPS = framesCountPerSecond / (timeElapsed / 1000);
+    lastFPSUpdate = currentTime;
+    framesCountPerSecond = 0;
+  }
 }
 
 void Game::render() {
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 1);
-    SDL_RenderClear(renderer);
+  SDL_SetRenderDrawColor(renderer, 0, 0, 0, 1);
+  SDL_RenderClear(renderer);
 
-    // draw game
-    currentScene->render(renderer);
+  // draw game
+  currentScene->render(renderer);
 
-    SDL_RenderPresent(renderer);
+  SDL_RenderPresent(renderer);
 }
 
 void Game::handleEvents() {

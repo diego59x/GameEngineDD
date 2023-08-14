@@ -5,14 +5,12 @@
 
 Scene::Scene(const std::string& name) 
     : name(name) {
-        std::cout << "Scene created";
 }
 
 Scene::~Scene() {
-        std::cout << "Scene Destroyed";
-        for (auto s : setupSystems) {
-                delete s;
-        }
+  for (auto s : setupSystems) {
+    delete s;
+  }
 }
 
 Entity Scene::createEntity(const std::string& name, int x, int y) {

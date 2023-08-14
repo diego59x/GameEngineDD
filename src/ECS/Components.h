@@ -16,3 +16,10 @@ struct SpeedComponent {
     int x;
     int y;
 };
+
+struct ColorComponent {
+    int r;
+    int g;
+    int b;
+    int c;
+};

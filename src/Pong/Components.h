@@ -1,5 +1,11 @@
 #include "../ECS/Components.h"
 
+enum PlayerType { PLAYER_1, PLAYER_2, BALL};
+
+struct TypeComponent {
+  PlayerType objType;
+};
+
 struct SizeComponent {
   int w;
   int h;

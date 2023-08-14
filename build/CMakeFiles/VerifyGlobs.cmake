@@ -5,7 +5,6 @@ cmake_policy(SET CMP0009 NEW)
 # SOURCES at CMakeLists.txt:9 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/diego/Documents/GameEngineDD/src/*.cpp")
 set(OLD_GLOB
-  "/home/diego/Documents/GameEngineDD/src/CustomObj/objRect.cpp"
   "/home/diego/Documents/GameEngineDD/src/Game/Game.cpp"
   "/home/diego/Documents/GameEngineDD/src/Pong/Pong.cpp"
   "/home/diego/Documents/GameEngineDD/src/Scene/Scene.cpp"

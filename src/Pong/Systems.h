@@ -5,101 +5,142 @@
 
 class HelloWorldSystem : public SetupSystem {
   public:
-    HelloWorldSystem() {
-      std::cout << "Hello World Constructor";
-    }
+    HelloWorldSystem(int screen_width, int screen_height, int ballSpeed) 
+    : screen_width(screen_width), screen_height(screen_height), ballSpeed(ballSpeed) {}
 
-    ~HelloWorldSystem() {
-      std::cout << "Hello World Destructor";
-    }
+    ~HelloWorldSystem() {}
 
     void run() {
-      std::cout << "hello run";
+      scene->r.view<TransformComponent, TypeComponent, SpeedComponent>()
+        .each(
+          [&](const auto entity, auto& t, auto& ty, auto& s) {
+            switch (ty.objType)
+            {
+              case BALL:
+                t.position.x = screen_width/2;
+                t.position.y = screen_height/2;
+                s.x = ballSpeed;
+                s.y = ballSpeed;
+              break;
+              default:
+              break;
+            }
+          }
+        );
     }
+    private:
+      int screen_width, screen_height, ballSpeed;
 };
 
 class RectRenderSystem : public RenderSystem {
   void run(SDL_Renderer* renderer) {
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 1);
+    scene->r.view<TransformComponent, SizeComponent, ColorComponent>()
+      .each(
+        [&](const auto entity, auto& t, auto& sz, auto& cr) {
+          SDL_SetRenderDrawColor(renderer, cr.r, cr.g, cr.b, cr.c);
 
-    const auto view = scene->r.view<TransformComponent, SizeComponent>();
+          int x = t.position.x;
+          int y = t.position.y;
+          int w = sz.w;
+          int h = sz.h;
 
-    for (const auto entity : view) {
-      const auto t = view.get<TransformComponent>(entity);
-      const auto s = view.get<SizeComponent>(entity);
-
-
-      int x = t.position.x;
-      int y = t.position.y;
-      int w = s.w;
-      int h = s.h;
-
-      SDL_Rect rect = { x, y, w, h};
-      SDL_RenderFillRect(renderer, &rect);
-    }
+          SDL_Rect rect = { x, y, w, h };
+          SDL_RenderFillRect(renderer, &rect);
+        }
+      );
   }
 };
 
 class MovementUpdateSystem : public UpdateSystem {
   public:
-    MovementUpdateSystem(int screen_width, int screen_height) 
-    : screen_width(screen_width), screen_height(screen_height) {}
+    MovementUpdateSystem(int screen_width, int screen_height, int* player_one_score, int* player_two_score) 
+    : screen_width(screen_width), screen_height(screen_height), player_one_score(player_one_score), player_two_score(player_two_score) {}
 
     void run(float dT) {
-      const auto view = scene->r.view<TransformComponent, SpeedComponent, SizeComponent>();
 
-      for (const auto entity : view) {
-        auto& t = view.get<TransformComponent>(entity);
-        auto& s = view.get<SpeedComponent>(entity);
-        auto& sz = view.get<SizeComponent>(entity);
+    scene->r.view<TransformComponent, SpeedComponent, SizeComponent, TypeComponent>()
+      .each(
+        [&](const auto entity, auto& t, auto& s, auto& sz, auto& ty) {
+          if (s.x == 0 && s.y == 0) {
+            return;
+          }
 
+          const int nx = t.position.x + s.x * dT;
+          const int ny = t.position.y + s.y * dT;
 
-        if (s.x == 0 && s.y == 0) {
-          continue;
+          switch (ty.objType)
+          {
+          case BALL:
+            if (ny <= 0 || ny + sz.h > screen_height) {
+              s.y *= -1.2;
+            }
+            if (nx <= 0) {
+              scene->setup();
+              (*player_one_score)++;
+              break;
+            }
+            if (nx + sz.w >= screen_width) {
+              scene->setup();
+              (*player_two_score)++;
+              break;
+            }
+            t.position.x = nx;
+            t.position.y = ny;
+            break;
+          case PLAYER_1:
+          case PLAYER_2:
+            if (ny - sz.h <= -sz.h || ny + sz.h > screen_height) {
+              break;
+            }
+            t.position.x = nx;
+            t.position.y = ny;
+            break;
+          default:
+            break;
+          }
+
         }
-
-        const int nx = t.position.x + s.x * dT;
-        const int ny = t.position.y + s.y * dT;
-
-        if (nx <= 0) {
-          s.x *= -1.2;
-        }
-        if (nx + sz.w >= screen_width) {
-          s.x *= -1.2;
-        }
-        if (ny <= 0) {
-          s.y *= -1.2;
-        }
-        if (ny + sz.h > screen_height) {
-          exit(1);
-        }
-
-        t.position.x = nx;
-        t.position.y = ny;
-      }
+      );
     }
   private:
-    int screen_width;
-    int screen_height;
+    int screen_width,screen_height;
+    int* player_one_score;
+    int* player_two_score;
 };
 
 class PlayerInputSystem : public EventSystem {
   void run(SDL_Event event) {
-    scene->r.view<SpeedComponent, PlayerComponent>()
+
+    scene->r.view<SpeedComponent, PlayerComponent, TypeComponent>()
       .each(
-        [&](const auto entity, auto& s, auto& p) {
+        [&](const auto entity, auto& s, auto& p, auto& t) {
           if (event.type == SDL_KEYDOWN) {
             switch(event.key.keysym.sym) {
-              case SDLK_RIGHT:
-                s.x = p.moveSpeed;
+              case SDLK_UP:
+                if (t.objType == PLAYER_1) {
+                  s.y = -p.moveSpeed;
+                }
                 break;
-              case SDLK_LEFT:
-                s.x = -p.moveSpeed;
+              case SDLK_DOWN:
+                if (t.objType == PLAYER_1) {
+                  s.y = p.moveSpeed;
+                }
                 break;
+              case SDLK_w:
+                if (t.objType == PLAYER_2) {
+                  s.y = -p.moveSpeed;
+                }
+                break;
+              case SDLK_s:
+                if (t.objType == PLAYER_2) {
+                  s.y = p.moveSpeed;
+                }
+                break;
+              default: break;
             }
           }
           if (event.type == SDL_KEYUP) {
-            s.x = 0;
+            s.y = 0;
           }
         }
       );
@@ -165,8 +206,8 @@ class BounceUpdateSystem : public UpdateSystem {
             auto& colliderComponent
           ) {
             if (colliderComponent.triggered) {
-              speedComponent.y *= -1.5;
-              speedComponent.x += colliderComponent.transferSpeed;
+              speedComponent.x *= -1.5;
+              speedComponent.y += colliderComponent.transferSpeed;
 
               colliderComponent.triggered = false;
             }
