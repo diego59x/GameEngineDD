@@ -178,6 +178,30 @@ src/Game/Graphics/Texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.s
 .PHONY : src/Game/Graphics/Texture.cpp.s
 
+src/Game/Graphics/TextureManager.o: src/Game/Graphics/TextureManager.cpp.o
+.PHONY : src/Game/Graphics/TextureManager.o
+
+# target to build an object file
+src/Game/Graphics/TextureManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o
+.PHONY : src/Game/Graphics/TextureManager.cpp.o
+
+src/Game/Graphics/TextureManager.i: src/Game/Graphics/TextureManager.cpp.i
+.PHONY : src/Game/Graphics/TextureManager.i
+
+# target to preprocess a source file
+src/Game/Graphics/TextureManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.i
+.PHONY : src/Game/Graphics/TextureManager.cpp.i
+
+src/Game/Graphics/TextureManager.s: src/Game/Graphics/TextureManager.cpp.s
+.PHONY : src/Game/Graphics/TextureManager.s
+
+# target to generate assembly for a file
+src/Game/Graphics/TextureManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.s
+.PHONY : src/Game/Graphics/TextureManager.cpp.s
+
 src/Pong/Pong.o: src/Pong/Pong.cpp.o
 .PHONY : src/Pong/Pong.o
 
@@ -265,6 +289,9 @@ help:
 	@echo "... src/Game/Graphics/Texture.o"
 	@echo "... src/Game/Graphics/Texture.i"
 	@echo "... src/Game/Graphics/Texture.s"
+	@echo "... src/Game/Graphics/TextureManager.o"
+	@echo "... src/Game/Graphics/TextureManager.i"
+	@echo "... src/Game/Graphics/TextureManager.s"
 	@echo "... src/Pong/Pong.o"
 	@echo "... src/Pong/Pong.i"
 	@echo "... src/Pong/Pong.s"

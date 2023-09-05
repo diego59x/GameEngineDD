@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GEA.dir/src/Game/Game.cpp.o.d"
   "CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.o"
   "CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.o.d"
+  "CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o"
+  "CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o.d"
   "CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o"
   "CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o.d"
   "CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o"

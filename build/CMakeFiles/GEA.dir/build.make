@@ -111,10 +111,24 @@ CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documents/GameEngineDD/src/Game/Graphics/Texture.cpp -o CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.s
 
+CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o: CMakeFiles/GEA.dir/flags.make
+CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o: ../src/Game/Graphics/TextureManager.cpp
+CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o: CMakeFiles/GEA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o -MF CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o.d -o CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o -c /home/diego/Documents/GameEngineDD/src/Game/Graphics/TextureManager.cpp
+
+CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diego/Documents/GameEngineDD/src/Game/Graphics/TextureManager.cpp > CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.i
+
+CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documents/GameEngineDD/src/Game/Graphics/TextureManager.cpp -o CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.s
+
 CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: CMakeFiles/GEA.dir/flags.make
 CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: ../src/Pong/Pong.cpp
 CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: CMakeFiles/GEA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o -MF CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o.d -o CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o -c /home/diego/Documents/GameEngineDD/src/Pong/Pong.cpp
 
 CMakeFiles/GEA.dir/src/Pong/Pong.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/GEA.dir/src/Pong/Pong.cpp.s: cmake_force
 CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: CMakeFiles/GEA.dir/flags.make
 CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: ../src/Scene/Scene.cpp
 CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: CMakeFiles/GEA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o -MF CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o.d -o CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o -c /home/diego/Documents/GameEngineDD/src/Scene/Scene.cpp
 
 CMakeFiles/GEA.dir/src/Scene/Scene.cpp.i: cmake_force
@@ -144,6 +158,7 @@ GEA_OBJECTS = \
 "CMakeFiles/GEA.dir/src/main.cpp.o" \
 "CMakeFiles/GEA.dir/src/Game/Game.cpp.o" \
 "CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.o" \
+"CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o" \
 "CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o" \
 "CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o"
 
@@ -153,11 +168,12 @@ GEA_EXTERNAL_OBJECTS =
 GEA: CMakeFiles/GEA.dir/src/main.cpp.o
 GEA: CMakeFiles/GEA.dir/src/Game/Game.cpp.o
 GEA: CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.o
+GEA: CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o
 GEA: CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o
 GEA: CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o
 GEA: CMakeFiles/GEA.dir/build.make
 GEA: CMakeFiles/GEA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable GEA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable GEA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GEA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -7,6 +7,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/diego/Documents/GameEng
 set(OLD_GLOB
   "/home/diego/Documents/GameEngineDD/src/Game/Game.cpp"
   "/home/diego/Documents/GameEngineDD/src/Game/Graphics/Texture.cpp"
+  "/home/diego/Documents/GameEngineDD/src/Game/Graphics/TextureManager.cpp"
   "/home/diego/Documents/GameEngineDD/src/Pong/Pong.cpp"
   "/home/diego/Documents/GameEngineDD/src/Scene/Scene.cpp"
   "/home/diego/Documents/GameEngineDD/src/main.cpp"

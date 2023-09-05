@@ -81,12 +81,12 @@ clean: CMakeFiles/GEA.dir/clean
 CMakeFiles/GEA.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target GEA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target GEA"
 .PHONY : CMakeFiles/GEA.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GEA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diego/Documents/GameEngineDD/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diego/Documents/GameEngineDD/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GEA.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/diego/Documents/GameEngineDD/build/CMakeFiles 0
 .PHONY : CMakeFiles/GEA.dir/rule

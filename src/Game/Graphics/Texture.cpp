@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Texture.h"
+#include "./Texture.h"
 
 
 Texture::Texture(SDL_Renderer* renderer, SDL_Window* window) 

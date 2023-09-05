@@ -1,11 +1,11 @@
 #pragma once
 
 #include <SDL2/SDL.h>
-#include <SDL/SDL_image.h>
+#include <SDL2/SDL_image.h>
 #include <stdio.h>
 #include <string>
 #include <functional>
-// #include "PixelShader.h"
+#include "./PixelShader.h"
 
 class Texture {
 	public:

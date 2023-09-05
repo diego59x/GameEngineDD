@@ -35,7 +35,7 @@ target_include_directories(
 target_link_libraries(
   ${PROJECT_NAME}
   PRIVATE ${SDL2_LIBRARIES}
-  SDL_image
+  SDL2_image
 )
 # PRIVATE GL SDL2main SDL2
 

@@ -2,6 +2,7 @@
 #include "./Components.h"
 #include <iostream>
 #include "../ECS/SystemTypes/SystemTypes.h"
+#include "../Game/Graphics/TextureManager.h"
 
 class HelloWorldSystem : public SetupSystem {
   public:
@@ -213,5 +214,56 @@ class BounceUpdateSystem : public UpdateSystem {
             }
           }
       );
+    }
+};
+
+class SimpleSpriteSetupSystem : public SetupSystem {
+  public:
+    SimpleSpriteSetupSystem(SDL_Renderer* renderer, SDL_Window* window) 
+    : renderer(renderer), window(window) { }
+
+    ~SimpleSpriteSetupSystem() {
+      auto view = scene->r.view<SimpleSpriteComponent>();
+      for (auto entity : view)
+      {
+        const auto spriteComponent = view.get<SimpleSpriteComponent>(entity);
+
+        TextureManager::UnLoadTexture(spriteComponent.filename , spriteComponent.shader.name);
+
+      }
+    }
+
+    void run () {
+      auto view = scene->r.view<SimpleSpriteComponent>();
+
+
+      for (auto entity : view)
+      {
+        const auto spriteComponent = view.get<SimpleSpriteComponent>(entity);
+
+        TextureManager::LoadTexture(spriteComponent.filename, renderer, window, spriteComponent.shader);
+
+      }
+    }
+
+  private:
+    SDL_Renderer* renderer;
+    SDL_Window* window;
+};
+
+class SimpleSpriteRenderSystem : public RenderSystem {
+  public:
+    void run (SDL_Renderer* renderer) {
+      auto view = scene->r.view<TransformComponent, SimpleSpriteComponent>();
+
+      for (auto entity : view)
+      {
+        const auto spriteComponent = view.get<SimpleSpriteComponent>(entity);
+        const auto transformComponent = view.get<TransformComponent>(entity);
+
+
+        Texture* texture = TextureManager::GetTexture(spriteComponent.filename, spriteComponent.shader.name);
+        texture->render(transformComponent.position.x, transformComponent.position.y);
+      }
     }
 };
