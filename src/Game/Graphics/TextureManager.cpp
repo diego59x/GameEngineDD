@@ -2,13 +2,13 @@
 
 std::map<std::string, Texture*> TextureManager::textures;
 
-Texture* TextureManager::LoadTexture(const std::string& filename, SDL_Renderer* renderer, SDL_Window* window, PixelShader shader)
+Texture* TextureManager::LoadTexture(const std::string& filename, SDL_Renderer* renderer, PixelShader shader)
 {
     if (textures.count(filename + shader.name) > 0) {
         return textures[filename + shader.name];
     }
 
-    Texture* texture = new Texture(renderer, window);
+    Texture* texture = new Texture(renderer);
     texture->load("assets/" + filename, shader);
 
     textures[filename + shader.name] = texture;

@@ -22,18 +22,18 @@ Pong::~Pong() {
 Scene* Pong::createGameplayScene() {
   Scene* scene = new Scene("GAMEPLAY SCENE");
 
-  Entity will = scene->createEntity("will", (screen_width/2), (screen_height/2));
-  will.addComponent<SimpleSpriteComponent>("sprites/megaman/WillLittleCeasar.png");
-
-  Entity willWhite = scene->createEntity("will2", 100, 100);
-  willWhite.addComponent<SimpleSpriteComponent>("sprites/megaman/WillLittleCeasar.png"
-  , [](Uint32 color) -> Uint32 { return 0xFF0000; }
+  Entity will = scene->createEntity("will", 100, 100);
+  will.addComponent<SpriteComponent>(
+    "sprites/characterWill/WillLittleCeasarIdle.png",
+    0, 0,
+    32,
+    4,
+    1000
   );
 
-
-  scene->addSetupSystem(new SimpleSpriteSetupSystem(renderer, window));
-  scene->addRenderSystem(new SimpleSpriteRenderSystem());
-
+  scene->addSetupSystem(new SpriteSetupSystem(renderer));
+  scene->addRenderSystem(new SpriteRenderSystem());
+  scene->addUpdateSystem(new SpriteUpdateSystem());
 
   return scene;
 }

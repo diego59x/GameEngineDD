@@ -4,266 +4,134 @@
 #include "../ECS/SystemTypes/SystemTypes.h"
 #include "../Game/Graphics/TextureManager.h"
 
-class HelloWorldSystem : public SetupSystem {
+// class PlayerInputSystem : public EventSystem {
+//   void run(SDL_Event event) {
+//     auto& playerSpeed = scene->player->get<SpeedComponent>();
+//     int speed = 200;
+
+//     if (event.type == SDL_KEYDOWN) {
+//       switch(event.key.keysym.sym) {
+//         case SDLK_RIGHT:
+//           playerSpeed.x = speed;
+//           break;
+//         case SDLK_LEFT:
+//           playerSpeed.x = -speed;
+//           break;
+//         case SDLK_UP:
+//           playerSpeed.y = -speed;
+//           break;
+//         case SDLK_DOWN:
+//           playerSpeed.y = speed;
+//           break;
+//       }
+//     }
+//     if (event.type == SDL_KEYUP) {
+//       switch(event.key.keysym.sym) {
+//         case SDLK_RIGHT:
+//           playerSpeed.x = 0;
+//           break;
+//         case SDLK_LEFT:
+//           playerSpeed.x = 0;
+//           break;
+//         case SDLK_UP:
+//           playerSpeed.y = 0;
+//           break;
+//         case SDLK_DOWN:
+//           playerSpeed.y = 0;
+//           break;
+//       }
+//     }
+//   }
+// };
+
+class SpriteSetupSystem : public SetupSystem {
   public:
-    HelloWorldSystem(int screen_width, int screen_height, int ballSpeed) 
-    : screen_width(screen_width), screen_height(screen_height), ballSpeed(ballSpeed) {}
+    SpriteSetupSystem(SDL_Renderer* renderer) 
+    : renderer(renderer) { }
 
-    ~HelloWorldSystem() {}
-
-    void run() {
-      scene->r.view<TransformComponent, TypeComponent, SpeedComponent>()
-        .each(
-          [&](const auto entity, auto& t, auto& ty, auto& s) {
-            switch (ty.objType)
-            {
-              case BALL:
-                t.position.x = screen_width/2;
-                t.position.y = screen_height/2;
-                s.x = ballSpeed;
-                s.y = ballSpeed;
-              break;
-              default:
-              break;
-            }
-          }
-        );
-    }
-    private:
-      int screen_width, screen_height, ballSpeed;
-};
-
-class RectRenderSystem : public RenderSystem {
-  void run(SDL_Renderer* renderer) {
-    scene->r.view<TransformComponent, SizeComponent, ColorComponent>()
-      .each(
-        [&](const auto entity, auto& t, auto& sz, auto& cr) {
-          SDL_SetRenderDrawColor(renderer, cr.r, cr.g, cr.b, cr.c);
-
-          int x = t.position.x;
-          int y = t.position.y;
-          int w = sz.w;
-          int h = sz.h;
-
-          SDL_Rect rect = { x, y, w, h };
-          SDL_RenderFillRect(renderer, &rect);
-        }
-      );
-  }
-};
-
-class MovementUpdateSystem : public UpdateSystem {
-  public:
-    MovementUpdateSystem(int screen_width, int screen_height, int* player_one_score, int* player_two_score) 
-    : screen_width(screen_width), screen_height(screen_height), player_one_score(player_one_score), player_two_score(player_two_score) {}
-
-    void run(float dT) {
-
-    scene->r.view<TransformComponent, SpeedComponent, SizeComponent, TypeComponent>()
-      .each(
-        [&](const auto entity, auto& t, auto& s, auto& sz, auto& ty) {
-          if (s.x == 0 && s.y == 0) {
-            return;
-          }
-
-          const int nx = t.position.x + s.x * dT;
-          const int ny = t.position.y + s.y * dT;
-
-          switch (ty.objType)
-          {
-          case BALL:
-            if (ny <= 0 || ny + sz.h > screen_height) {
-              s.y *= -1.2;
-            }
-            if (nx <= 0) {
-              scene->setup();
-              (*player_one_score)++;
-              break;
-            }
-            if (nx + sz.w >= screen_width) {
-              scene->setup();
-              (*player_two_score)++;
-              break;
-            }
-            t.position.x = nx;
-            t.position.y = ny;
-            break;
-          case PLAYER_1:
-          case PLAYER_2:
-            if (ny - sz.h <= -sz.h || ny + sz.h > screen_height) {
-              break;
-            }
-            t.position.x = nx;
-            t.position.y = ny;
-            break;
-          default:
-            break;
-          }
-
-        }
-      );
-    }
-  private:
-    int screen_width,screen_height;
-    int* player_one_score;
-    int* player_two_score;
-};
-
-class PlayerInputSystem : public EventSystem {
-  void run(SDL_Event event) {
-
-    scene->r.view<SpeedComponent, PlayerComponent, TypeComponent>()
-      .each(
-        [&](const auto entity, auto& s, auto& p, auto& t) {
-          if (event.type == SDL_KEYDOWN) {
-            switch(event.key.keysym.sym) {
-              case SDLK_UP:
-                if (t.objType == PLAYER_1) {
-                  s.y = -p.moveSpeed;
-                }
-                break;
-              case SDLK_DOWN:
-                if (t.objType == PLAYER_1) {
-                  s.y = p.moveSpeed;
-                }
-                break;
-              case SDLK_w:
-                if (t.objType == PLAYER_2) {
-                  s.y = -p.moveSpeed;
-                }
-                break;
-              case SDLK_s:
-                if (t.objType == PLAYER_2) {
-                  s.y = p.moveSpeed;
-                }
-                break;
-              default: break;
-            }
-          }
-          if (event.type == SDL_KEYUP) {
-            s.y = 0;
-          }
-        }
-      );
-    }
-};
-
-class CollisionDetectionUpdateSystem : public UpdateSystem {
-  void run(float dT) {
-    scene->r.view<TransformComponent, SizeComponent, ColliderComponent>()
-      .each(
-        [&](const auto entity,
-            auto& transformComponent,
-            auto& sizeComponent,
-            auto& colliderComponent
-          ) {
-            // cada entidad que tiene collider
-            // AABB
-            scene->r.view<TransformComponent, SpeedComponent, SizeComponent>()
-            .each(
-              [&](const auto entity2,
-                  auto& transformComponent2,
-                  auto& speedComponent2,
-                  auto& sizeComponent2
-                ) {
-                  if (entity == entity2) {
-                    // skip self collision
-                    return;
-                  }
-
-                  SDL_Rect boxCol1 = {
-                    static_cast<int>(transformComponent.position.x),
-                    static_cast<int>(transformComponent.position.y),
-                    sizeComponent.w,
-                    sizeComponent.h
-                  };
-
-                  SDL_Rect boxCol2 = {
-                    static_cast<int>(transformComponent2.position.x),
-                    static_cast<int>(transformComponent2.position.y),
-                    sizeComponent2.w,
-                    sizeComponent2.h
-                  };
-
-                  if (SDL_HasIntersection(&boxCol1, &boxCol2)) {
-                    colliderComponent.triggered = true;
-                    colliderComponent.transferSpeed = speedComponent2.x;
-                  }
-
-              }
-            );
-        }
-      );
-    }
-};
-
-class BounceUpdateSystem : public UpdateSystem {
-  void run(float dT) {
-    scene->r.view<TransformComponent, SpeedComponent, ColliderComponent>()
-      .each(
-        [&](const auto entity,
-            auto& transformComponent,
-            auto& speedComponent,
-            auto& colliderComponent
-          ) {
-            if (colliderComponent.triggered) {
-              speedComponent.x *= -1.5;
-              speedComponent.y += colliderComponent.transferSpeed;
-
-              colliderComponent.triggered = false;
-            }
-          }
-      );
-    }
-};
-
-class SimpleSpriteSetupSystem : public SetupSystem {
-  public:
-    SimpleSpriteSetupSystem(SDL_Renderer* renderer, SDL_Window* window) 
-    : renderer(renderer), window(window) { }
-
-    ~SimpleSpriteSetupSystem() {
-      auto view = scene->r.view<SimpleSpriteComponent>();
+    ~SpriteSetupSystem() {
+      auto view = scene->r.view<SpriteComponent>();
       for (auto entity : view)
       {
-        const auto spriteComponent = view.get<SimpleSpriteComponent>(entity);
+        const auto spriteComponent = view.get<SpriteComponent>(entity);
 
-        TextureManager::UnLoadTexture(spriteComponent.filename , spriteComponent.shader.name);
+        TextureManager::UnLoadTexture(spriteComponent.filename, spriteComponent.shader.name);
 
       }
     }
 
     void run () {
-      auto view = scene->r.view<SimpleSpriteComponent>();
+      auto view = scene->r.view<SpriteComponent>();
 
 
       for (auto entity : view)
       {
-        const auto spriteComponent = view.get<SimpleSpriteComponent>(entity);
+        const auto spriteComponent = view.get<SpriteComponent>(entity);
 
-        TextureManager::LoadTexture(spriteComponent.filename, renderer, window, spriteComponent.shader);
+        TextureManager::LoadTexture(spriteComponent.filename, renderer, spriteComponent.shader);
 
       }
     }
 
   private:
     SDL_Renderer* renderer;
-    SDL_Window* window;
 };
 
-class SimpleSpriteRenderSystem : public RenderSystem {
+class SpriteRenderSystem : public RenderSystem {
   public:
     void run (SDL_Renderer* renderer) {
-      auto view = scene->r.view<TransformComponent, SimpleSpriteComponent>();
+      auto view = scene->r.view<TransformComponent, SpriteComponent>();
 
       for (auto entity : view)
       {
-        const auto spriteComponent = view.get<SimpleSpriteComponent>(entity);
+        const auto spriteComponent = view.get<SpriteComponent>(entity);
         const auto transformComponent = view.get<TransformComponent>(entity);
 
 
         Texture* texture = TextureManager::GetTexture(spriteComponent.filename, spriteComponent.shader.name);
-        texture->render(transformComponent.position.x, transformComponent.position.y);
+        
+        SDL_Rect clip = {
+          spriteComponent.xIndex * spriteComponent.size,
+          spriteComponent.yIndex * spriteComponent.size,
+          spriteComponent.size,
+          spriteComponent.size
+        };
+        
+        texture->render(
+          transformComponent.position.x,
+          transformComponent.position.y,
+          32,
+          32,
+          &clip
+        );
+      }
+    }
+};
+
+class SpriteUpdateSystem : public UpdateSystem {
+  public:
+    void run(float dT) {
+      auto view = scene->r.view<SpriteComponent>();
+
+      Uint32 now = SDL_GetTicks();
+
+      for(auto entity : view) {
+        auto& spriteComponent = view.get<SpriteComponent>(entity);
+
+        if (spriteComponent.animationFrames > 0) {
+          float timeSinceLastUpdate = now - spriteComponent.lastUpdate;
+
+          int framesToUpdate = static_cast<int>(
+            timeSinceLastUpdate / 
+            spriteComponent.animationDuration * spriteComponent.animationFrames
+          );
+
+          if (framesToUpdate > 0) {
+            spriteComponent.xIndex += framesToUpdate;
+            spriteComponent.xIndex %= spriteComponent.animationFrames;
+            spriteComponent.lastUpdate = now;            
+          }
+        }
       }
     }
 };
