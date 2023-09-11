@@ -1,3 +1,4 @@
+#pragma once
 #include "../ECS/Components.h"
 
 enum PlayerType { PLAYER_1, PLAYER_2, BALL};
