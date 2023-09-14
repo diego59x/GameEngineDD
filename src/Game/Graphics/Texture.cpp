@@ -65,7 +65,6 @@ void Texture::load(std::string path, PixelShader shader) {
   if (shader.func != nullptr) {
     for (int i = 0; i < (pitch/4 * formattedSurface->h); ++i) {
       targetPixels[i] = shader.func(sourcePixels[i]);
-      std::cout << " before: " << sourcePixels[i] << " after: " << targetPixels[i] << std::endl;
     }
   } else {
     memcpy(targetPixels, sourcePixels, pitch * formattedSurface->h);

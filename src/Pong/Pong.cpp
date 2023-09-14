@@ -35,8 +35,7 @@ Scene* Pong::createGameplayScene() {
     4,
     1000
     , PixelShader {
-       [](Uint32 color) -> Uint32 { if (color == 0x36008A) {
-        std::cout << "Condition is valid, color is 0x36008A" << std::endl;
+       [](Uint32 color) -> Uint32 { if (color == 255) {
           return 0xFFFFFF;
         } else {
             return color;
