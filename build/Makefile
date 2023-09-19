@@ -202,30 +202,6 @@ src/Game/Graphics/TextureManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.s
 .PHONY : src/Game/Graphics/TextureManager.cpp.s
 
-src/Pong/Pong.o: src/Pong/Pong.cpp.o
-.PHONY : src/Pong/Pong.o
-
-# target to build an object file
-src/Pong/Pong.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o
-.PHONY : src/Pong/Pong.cpp.o
-
-src/Pong/Pong.i: src/Pong/Pong.cpp.i
-.PHONY : src/Pong/Pong.i
-
-# target to preprocess a source file
-src/Pong/Pong.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/Pong/Pong.cpp.i
-.PHONY : src/Pong/Pong.cpp.i
-
-src/Pong/Pong.s: src/Pong/Pong.cpp.s
-.PHONY : src/Pong/Pong.s
-
-# target to generate assembly for a file
-src/Pong/Pong.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/Pong/Pong.cpp.s
-.PHONY : src/Pong/Pong.cpp.s
-
 src/Scene/Scene.o: src/Scene/Scene.cpp.o
 .PHONY : src/Scene/Scene.o
 
@@ -249,6 +225,30 @@ src/Scene/Scene.s: src/Scene/Scene.cpp.s
 src/Scene/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/Scene/Scene.cpp.s
 .PHONY : src/Scene/Scene.cpp.s
+
+src/WillAgainst/WillAgainst.o: src/WillAgainst/WillAgainst.cpp.o
+.PHONY : src/WillAgainst/WillAgainst.o
+
+# target to build an object file
+src/WillAgainst/WillAgainst.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o
+.PHONY : src/WillAgainst/WillAgainst.cpp.o
+
+src/WillAgainst/WillAgainst.i: src/WillAgainst/WillAgainst.cpp.i
+.PHONY : src/WillAgainst/WillAgainst.i
+
+# target to preprocess a source file
+src/WillAgainst/WillAgainst.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.i
+.PHONY : src/WillAgainst/WillAgainst.cpp.i
+
+src/WillAgainst/WillAgainst.s: src/WillAgainst/WillAgainst.cpp.s
+.PHONY : src/WillAgainst/WillAgainst.s
+
+# target to generate assembly for a file
+src/WillAgainst/WillAgainst.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEA.dir/build.make CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.s
+.PHONY : src/WillAgainst/WillAgainst.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -292,12 +292,12 @@ help:
 	@echo "... src/Game/Graphics/TextureManager.o"
 	@echo "... src/Game/Graphics/TextureManager.i"
 	@echo "... src/Game/Graphics/TextureManager.s"
-	@echo "... src/Pong/Pong.o"
-	@echo "... src/Pong/Pong.i"
-	@echo "... src/Pong/Pong.s"
 	@echo "... src/Scene/Scene.o"
 	@echo "... src/Scene/Scene.i"
 	@echo "... src/Scene/Scene.s"
+	@echo "... src/WillAgainst/WillAgainst.o"
+	@echo "... src/WillAgainst/WillAgainst.i"
+	@echo "... src/WillAgainst/WillAgainst.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

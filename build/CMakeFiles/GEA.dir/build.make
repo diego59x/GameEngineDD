@@ -125,24 +125,10 @@ CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documents/GameEngineDD/src/Game/Graphics/TextureManager.cpp -o CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.s
 
-CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: CMakeFiles/GEA.dir/flags.make
-CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: ../src/Pong/Pong.cpp
-CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o: CMakeFiles/GEA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o -MF CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o.d -o CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o -c /home/diego/Documents/GameEngineDD/src/Pong/Pong.cpp
-
-CMakeFiles/GEA.dir/src/Pong/Pong.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GEA.dir/src/Pong/Pong.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diego/Documents/GameEngineDD/src/Pong/Pong.cpp > CMakeFiles/GEA.dir/src/Pong/Pong.cpp.i
-
-CMakeFiles/GEA.dir/src/Pong/Pong.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GEA.dir/src/Pong/Pong.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documents/GameEngineDD/src/Pong/Pong.cpp -o CMakeFiles/GEA.dir/src/Pong/Pong.cpp.s
-
 CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: CMakeFiles/GEA.dir/flags.make
 CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: ../src/Scene/Scene.cpp
 CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o: CMakeFiles/GEA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o -MF CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o.d -o CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o -c /home/diego/Documents/GameEngineDD/src/Scene/Scene.cpp
 
 CMakeFiles/GEA.dir/src/Scene/Scene.cpp.i: cmake_force
@@ -153,14 +139,28 @@ CMakeFiles/GEA.dir/src/Scene/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GEA.dir/src/Scene/Scene.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documents/GameEngineDD/src/Scene/Scene.cpp -o CMakeFiles/GEA.dir/src/Scene/Scene.cpp.s
 
+CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o: CMakeFiles/GEA.dir/flags.make
+CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o: ../src/WillAgainst/WillAgainst.cpp
+CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o: CMakeFiles/GEA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o -MF CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o.d -o CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o -c /home/diego/Documents/GameEngineDD/src/WillAgainst/WillAgainst.cpp
+
+CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/diego/Documents/GameEngineDD/src/WillAgainst/WillAgainst.cpp > CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.i
+
+CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/diego/Documents/GameEngineDD/src/WillAgainst/WillAgainst.cpp -o CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.s
+
 # Object files for target GEA
 GEA_OBJECTS = \
 "CMakeFiles/GEA.dir/src/main.cpp.o" \
 "CMakeFiles/GEA.dir/src/Game/Game.cpp.o" \
 "CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.o" \
 "CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o" \
-"CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o" \
-"CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o"
+"CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o" \
+"CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o"
 
 # External object files for target GEA
 GEA_EXTERNAL_OBJECTS =
@@ -169,8 +169,8 @@ GEA: CMakeFiles/GEA.dir/src/main.cpp.o
 GEA: CMakeFiles/GEA.dir/src/Game/Game.cpp.o
 GEA: CMakeFiles/GEA.dir/src/Game/Graphics/Texture.cpp.o
 GEA: CMakeFiles/GEA.dir/src/Game/Graphics/TextureManager.cpp.o
-GEA: CMakeFiles/GEA.dir/src/Pong/Pong.cpp.o
 GEA: CMakeFiles/GEA.dir/src/Scene/Scene.cpp.o
+GEA: CMakeFiles/GEA.dir/src/WillAgainst/WillAgainst.cpp.o
 GEA: CMakeFiles/GEA.dir/build.make
 GEA: CMakeFiles/GEA.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/diego/Documents/GameEngineDD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable GEA"

@@ -34,3 +34,23 @@ struct SpriteComponent {
 
   Uint32 lastUpdate = 0;
 };
+
+struct TilemapComponent {
+  int width;
+  int height;
+  int tileSize;
+  std::vector<Tile> map;
+};
+
+struct WorldComponent {
+  int width;
+  int height;
+};
+
+struct ColliderComponent {
+  int xo;
+  int yo;
+  int w;
+  int h;
+  SDL_Color color = {255, 255, 255};
+};

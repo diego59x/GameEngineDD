@@ -8,8 +8,8 @@ set(OLD_GLOB
   "/home/diego/Documents/GameEngineDD/src/Game/Game.cpp"
   "/home/diego/Documents/GameEngineDD/src/Game/Graphics/Texture.cpp"
   "/home/diego/Documents/GameEngineDD/src/Game/Graphics/TextureManager.cpp"
-  "/home/diego/Documents/GameEngineDD/src/Pong/Pong.cpp"
   "/home/diego/Documents/GameEngineDD/src/Scene/Scene.cpp"
+  "/home/diego/Documents/GameEngineDD/src/WillAgainst/WillAgainst.cpp"
   "/home/diego/Documents/GameEngineDD/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

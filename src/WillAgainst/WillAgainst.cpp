@@ -1,7 +1,7 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
-#include "./Pong.h"
+#include "./WillAgainst.h"
 #include "./Systems.h"
 #include "./Components.h"
 #include "../ECS/Entity.h"
@@ -44,6 +44,10 @@ Scene* Pong::createGameplayScene() {
        "red"
     }
   );
+
+  scene->addSetupSystem(new WorldSetupSystem());
+  scene->addSetupSystem(new TilemapSetupSystem(renderer));
+  scene->addRenderSystem(new TilemapRenderSystem());
 
   scene->addSetupSystem(new SpriteSetupSystem(renderer));
   scene->addRenderSystem(new SpriteRenderSystem());

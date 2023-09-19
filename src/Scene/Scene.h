@@ -28,6 +28,9 @@ class Scene {
         void render(SDL_Renderer* renderer);
         
         entt::registry r;
+
+        Entity* world;
+        Entity* player;
     private: 
         std::string name;
         std::vector<SetupSystem*> setupSystems;

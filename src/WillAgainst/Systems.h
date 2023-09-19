@@ -3,6 +3,7 @@
 #include <iostream>
 #include "../ECS/SystemTypes/SystemTypes.h"
 #include "../Game/Graphics/TextureManager.h"
+#include "../Game/Graphics/Tile.h"
 
 // class PlayerInputSystem : public EventSystem {
 //   void run(SDL_Event event) {
@@ -135,3 +136,115 @@ class SpriteUpdateSystem : public UpdateSystem {
       }
     }
 };
+
+class WorldSetupSystem : public SetupSystem {
+  public:
+    void run() {
+      int tilemapWidth = 50;
+      int tilemapHeight = 38;
+      int tilemapTileSize = 16;
+
+      scene->world = new Entity(scene->r.create(), scene);
+      scene->world->addComponent<TilemapComponent>(tilemapWidth, tilemapHeight, tilemapTileSize);
+      scene->world->addComponent<WorldComponent>(tilemapWidth * tilemapTileSize, tilemapHeight*tilemapTileSize);
+    }
+};
+
+class TilemapSetupSystem : public SetupSystem {
+  public:
+    TilemapSetupSystem(SDL_Renderer* renderer)
+      : renderer(renderer) { }
+
+    ~TilemapSetupSystem() {
+    }
+
+    void run() {
+      const auto playerPosition = scene->player->get<TransformComponent>();
+      Texture* surfaceTexture = TextureManager::LoadTexture("sprites/background/TileMoon.png", renderer);
+
+      auto& tilemap = scene->world->get<TilemapComponent>();
+      tilemap.map.resize(tilemap.width * tilemap.height);
+
+      Terrain moonSurface{surfaceTexture};
+
+      int centerX = playerPosition.position.x  / tilemap.tileSize;
+      int centerY = playerPosition.position.y  / tilemap.tileSize;
+
+      for (int y = 0; y < tilemap.height; y++) {
+        for (int x = 0; x < tilemap.width; x++) {
+          
+          int index = y * tilemap.width + x;
+
+          Tile& tile = tilemap.map[index];
+
+          if ((std::abs(centerX - x) < 5 && std::abs(centerY - y) < 5)) {
+            tile.up = moonSurface;
+            // tile.down = water;
+            tile.needsAutoTiling = true;
+          } else {
+            // tile.up = water;
+            tile.needsAutoTiling = false;
+            tile.isWalkable = false;
+          }
+        }
+      }
+   }
+
+  private:
+    SDL_Renderer* renderer;
+};
+
+
+class TilemapRenderSystem : public RenderSystem {
+  public:
+    void run(SDL_Renderer* renderer) {
+      auto& tilemap = scene->world->get<TilemapComponent>();
+      int size = tilemap.tileSize;
+
+      // int startX = 
+      // int endX = 
+      // int startY = 
+      // int endY = 
+
+      for (int y = startY; y <= endY; y++) {
+        for (int x = startX; x <= endX; x++) {
+          Tile tile = tilemap.map[y * tilemap.width + x];
+
+          int renderSize = tilemap.tileSize * z;
+
+          if (tile.down.texture) {
+            SDL_Rect downClip = {
+              tile.down.x,
+              tile.down.y,
+              size,
+              size
+            };
+
+            tile.down.texture->render(
+              x * renderSize ,
+              y * renderSize,
+              renderSize,
+              renderSize,
+              &downClip
+            );
+          }
+          SDL_Rect upClip = {
+              tile.up.x,
+              tile.up.y,
+              size,
+              size
+          };
+          tile.up.texture->render(
+            x * renderSize,
+            y * renderSize,
+            renderSize,
+            renderSize,
+            &upClip
+          );
+        }
+      }
+    }
+};
+
+
+
