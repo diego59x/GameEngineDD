@@ -18,34 +18,9 @@ Pong::~Pong() {}
 Scene* Pong::createGameplayScene() {
   Scene* scene = new Scene("GAMEPLAY SCENE");
 
-  Entity willOriginal = scene->createEntity("will", 200, 100);
-  willOriginal.addComponent<SpriteComponent>(
-    "sprites/characterWill/WillLittleCeasarIdle.png",
-    0, 0,
-    32,
-    4,
-    1000
-  );
-
-  Entity will = scene->createEntity("will2", 100, 100);
-  will.addComponent<SpriteComponent>(
-    "sprites/characterWill/WillLittleCeasarIdle.png",
-    0, 0,
-    32,
-    4,
-    1000
-    , PixelShader {
-       [](Uint32 color) -> Uint32 { if (color == 255) {
-          return 0xFFFFFF;
-        } else {
-            return color;
-        } 
-        },
-       "red"
-    }
-  );
-
   scene->addSetupSystem(new WorldSetupSystem());
+  scene->addSetupSystem(new PlayerSetupSystem());
+
   scene->addSetupSystem(new TilemapSetupSystem(renderer));
   scene->addRenderSystem(new TilemapRenderSystem());
 

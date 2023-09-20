@@ -11,8 +11,3 @@ struct SizeComponent {
 struct PlayerComponent {
   int moveSpeed;
 };
-
-struct ColliderComponent {
-  bool triggered;
-  int transferSpeed;
-};

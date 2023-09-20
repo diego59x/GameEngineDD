@@ -3,13 +3,11 @@
 
 struct Terrain {
   Texture* texture = nullptr;
-  int x = 0;
-  int y = 0;
+  int id = 0;
 };
 
 struct Tile {
-  Terrain up;
-  Terrain down;
+  Terrain terrain;
   bool needsAutoTiling;
   bool isWalkable = true;
 };

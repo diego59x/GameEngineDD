@@ -2,6 +2,7 @@
 #include <glm/glm.hpp>
 #include <string>
 #include "../Game/Graphics/PixelShader.h"
+#include "../Game/Graphics/Tile.h"
 
 struct NameComponent {
     std::string name;

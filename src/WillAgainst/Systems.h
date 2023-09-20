@@ -1,9 +1,13 @@
 #pragma once
 #include "./Components.h"
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
 #include "../ECS/SystemTypes/SystemTypes.h"
 #include "../Game/Graphics/TextureManager.h"
 #include "../Game/Graphics/Tile.h"
+#include "../ECS/Entity.h"
 
 // class PlayerInputSystem : public EventSystem {
 //   void run(SDL_Event event) {
@@ -44,6 +48,27 @@
 //     }
 //   }
 // };
+
+class PlayerSetupSystem : public SetupSystem {
+  public:
+    void run() {
+      const auto worldComponent = scene->world->get<WorldComponent>();
+      int spriteSize = 32;
+      int x = worldComponent.width / 2;
+      int y = worldComponent.height / 2;
+ 
+      scene->player = new Entity(scene->r.create(), scene);
+      scene->player->addComponent<TransformComponent>(glm::vec2(x, y));
+      auto& s = scene->player->addComponent<SpriteComponent>(
+        "sprites/characterWill/WillLittleCeasarIdle.png",
+        0, 0,
+        spriteSize,
+        4,
+        1000
+      );
+      s.lastUpdate = SDL_GetTicks();
+    }
+};
 
 class SpriteSetupSystem : public SetupSystem {
   public:
@@ -140,13 +165,13 @@ class SpriteUpdateSystem : public UpdateSystem {
 class WorldSetupSystem : public SetupSystem {
   public:
     void run() {
-      int tilemapWidth = 50;
-      int tilemapHeight = 38;
-      int tilemapTileSize = 16;
+      int tilemapWidth = 25;
+      int tilemapHeight = 25;
+      int tilemapTileSize = 32;
 
       scene->world = new Entity(scene->r.create(), scene);
       scene->world->addComponent<TilemapComponent>(tilemapWidth, tilemapHeight, tilemapTileSize);
-      scene->world->addComponent<WorldComponent>(tilemapWidth * tilemapTileSize, tilemapHeight*tilemapTileSize);
+      scene->world->addComponent<WorldComponent>(tilemapWidth * tilemapTileSize, tilemapHeight*tilemapTileSize);   
     }
 };
 
@@ -167,25 +192,31 @@ class TilemapSetupSystem : public SetupSystem {
 
       Terrain moonSurface{surfaceTexture};
 
-      int centerX = playerPosition.position.x  / tilemap.tileSize;
-      int centerY = playerPosition.position.y  / tilemap.tileSize;
+      // Read file
+      std::ifstream mapFile;
+      std::string line;
+      std::vector<int> mapData;
+      mapFile.open("assets/sprites/background/mapMoon.txt");
+      if (mapFile.is_open()) {
+          while ( getline (mapFile,line) )
+          {
+            std::istringstream iss(line); 
+            int numberTile;
+            while (iss >> numberTile) {
+                mapData.push_back(numberTile);
+            }
+          }
+          mapFile.close();
+      } else std::cout << "Problem with opening file";
 
       for (int y = 0; y < tilemap.height; y++) {
         for (int x = 0; x < tilemap.width; x++) {
           
           int index = y * tilemap.width + x;
-
           Tile& tile = tilemap.map[index];
-
-          if ((std::abs(centerX - x) < 5 && std::abs(centerY - y) < 5)) {
-            tile.up = moonSurface;
-            // tile.down = water;
-            tile.needsAutoTiling = true;
-          } else {
-            // tile.up = water;
-            tile.needsAutoTiling = false;
-            tile.isWalkable = false;
-          }
+          tile.terrain = moonSurface;
+          tile.terrain.id = mapData[index];
+          if (index == 25) tile.isWalkable = false;
         }
       }
    }
@@ -199,47 +230,28 @@ class TilemapRenderSystem : public RenderSystem {
   public:
     void run(SDL_Renderer* renderer) {
       auto& tilemap = scene->world->get<TilemapComponent>();
-      int size = tilemap.tileSize;
+      int renderSize = tilemap.tileSize;
 
-      // int startX = 
-      // int endX = 
-      // int startY = 
-      // int endY = 
-
-      for (int y = startY; y <= endY; y++) {
-        for (int x = startX; x <= endX; x++) {
+      for (int y = 0; y < tilemap.height; y++) {
+        for (int x = 0; x < tilemap.width; x++) { 
           Tile tile = tilemap.map[y * tilemap.width + x];
 
-          int renderSize = tilemap.tileSize * z;
+          const int xIndex = tile.terrain.id % 5;
+          const int yIndex = tile.terrain.id / 5;
 
-          if (tile.down.texture) {
-            SDL_Rect downClip = {
-              tile.down.x,
-              tile.down.y,
-              size,
-              size
-            };
-
-            tile.down.texture->render(
-              x * renderSize ,
-              y * renderSize,
-              renderSize,
-              renderSize,
-              &downClip
-            );
-          }
-          SDL_Rect upClip = {
-              tile.up.x,
-              tile.up.y,
-              size,
-              size
+          SDL_Rect terrainClip = {
+            xIndex * renderSize,
+            yIndex * renderSize,
+            renderSize,
+            renderSize
           };
-          tile.up.texture->render(
+
+          tile.terrain.texture->render(
             x * renderSize,
             y * renderSize,
             renderSize,
             renderSize,
-            &upClip
+            &terrainClip
           );
         }
       }
