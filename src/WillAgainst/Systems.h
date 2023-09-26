@@ -9,45 +9,64 @@
 #include "../Game/Graphics/Tile.h"
 #include "../ECS/Entity.h"
 
-// class PlayerInputSystem : public EventSystem {
-//   void run(SDL_Event event) {
-//     auto& playerSpeed = scene->player->get<SpeedComponent>();
-//     int speed = 200;
+class PlayerInputSystem : public EventSystem {
+  void run(SDL_Event event) {
+    auto& playerSpeed = scene->player->get<SpeedComponent>();
+    int speed = 200;
 
-//     if (event.type == SDL_KEYDOWN) {
-//       switch(event.key.keysym.sym) {
-//         case SDLK_RIGHT:
-//           playerSpeed.x = speed;
-//           break;
-//         case SDLK_LEFT:
-//           playerSpeed.x = -speed;
-//           break;
-//         case SDLK_UP:
-//           playerSpeed.y = -speed;
-//           break;
-//         case SDLK_DOWN:
-//           playerSpeed.y = speed;
-//           break;
-//       }
-//     }
-//     if (event.type == SDL_KEYUP) {
-//       switch(event.key.keysym.sym) {
-//         case SDLK_RIGHT:
-//           playerSpeed.x = 0;
-//           break;
-//         case SDLK_LEFT:
-//           playerSpeed.x = 0;
-//           break;
-//         case SDLK_UP:
-//           playerSpeed.y = 0;
-//           break;
-//         case SDLK_DOWN:
-//           playerSpeed.y = 0;
-//           break;
-//       }
-//     }
-//   }
-// };
+    if (event.type == SDL_KEYDOWN) {
+      switch(event.key.keysym.sym) {
+        case SDLK_RIGHT:
+          playerSpeed.x = speed;
+          break;
+        case SDLK_LEFT:
+          playerSpeed.x = -speed;
+          break;
+        case SDLK_UP:
+          playerSpeed.y = -speed;
+          break;
+        case SDLK_DOWN:
+          playerSpeed.y = speed;
+          break;
+      }
+    }
+    if (event.type == SDL_KEYUP) {
+      switch(event.key.keysym.sym) {
+        case SDLK_RIGHT:
+          playerSpeed.x = 0;
+          break;
+        case SDLK_LEFT:
+          playerSpeed.x = 0;
+          break;
+        case SDLK_UP:
+          playerSpeed.y = 0;
+          break;
+        case SDLK_DOWN:
+          playerSpeed.y = 0;
+          break;
+      }
+    }
+  }
+};
+
+class MovementUpdateSystem : public UpdateSystem {
+  public:
+    void run(float dT) {
+      const auto view = scene->r.view<TransformComponent, SpeedComponent>();
+
+      for (const auto entity : view) {
+        auto& t = view.get<TransformComponent>(entity);
+        auto& s = view.get<SpeedComponent>(entity);
+
+        if (s.x == 0 && s.y == 0) {
+          continue;
+        }
+
+        t.position.x += s.x * dT;
+        t.position.y += s.y * dT;
+      }
+  }
+};
 
 class PlayerSetupSystem : public SetupSystem {
   public:
@@ -225,7 +244,6 @@ class TilemapSetupSystem : public SetupSystem {
     SDL_Renderer* renderer;
 };
 
-
 class TilemapRenderSystem : public RenderSystem {
   public:
     void run(SDL_Renderer* renderer) {
@@ -257,6 +275,3 @@ class TilemapRenderSystem : public RenderSystem {
       }
     }
 };
-
-
-

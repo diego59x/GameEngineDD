@@ -27,6 +27,9 @@ Scene* Pong::createGameplayScene() {
   scene->addSetupSystem(new SpriteSetupSystem(renderer));
   scene->addRenderSystem(new SpriteRenderSystem());
   scene->addUpdateSystem(new SpriteUpdateSystem());
+  
+  scene->addEventSystem(new PlayerInputSystem());
+  scene->addUpdateSystem(new MovementUpdateSystem());
 
   return scene;
 }
