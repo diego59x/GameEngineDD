@@ -194,6 +194,24 @@ class WorldSetupSystem : public SetupSystem {
     }
 };
 
+class BackgroundSetupSystem : public SetupSystem {
+  public:
+    BackgroundSetupSystem(SDL_Renderer* renderer)
+      : renderer(renderer) { }
+
+    ~BackgroundSetupSystem() {
+      auto& background = scene->world->get<BackgroundComponent>();
+      TextureManager::UnLoadTexture(background.name, "");
+    }
+    void run() {
+      auto& world = scene->world->get<WorldComponent>();
+      Texture* backgroundTexture = TextureManager::LoadTexture("sprites/background/BackgroundStar.png", renderer);
+      scene->world->addComponent<BackgroundComponent>(world.width, world.height, "sprites/background/BackgroundStar.png", backgroundTexture);   
+    }
+  private:
+    SDL_Renderer* renderer;
+};
+
 class TilemapSetupSystem : public SetupSystem {
   public:
     TilemapSetupSystem(SDL_Renderer* renderer)
@@ -242,6 +260,28 @@ class TilemapSetupSystem : public SetupSystem {
 
   private:
     SDL_Renderer* renderer;
+};
+
+
+class BackgroundRenderSystem : public RenderSystem {
+  public:
+    void run(SDL_Renderer* renderer) {
+      auto& background = scene->world->get<BackgroundComponent>();
+
+      SDL_Rect backgroundRect = {
+        0,
+        1,
+        background.width,
+        background.height
+      };
+      background.backgroundTexture->render(
+        0,
+        0,
+        background.width,
+        background.height,
+        &backgroundRect
+      );
+    }
 };
 
 class TilemapRenderSystem : public RenderSystem {

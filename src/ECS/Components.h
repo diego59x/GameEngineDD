@@ -48,6 +48,13 @@ struct WorldComponent {
   int height;
 };
 
+struct BackgroundComponent {
+  int width;
+  int height;
+  std::string name;
+  Texture* backgroundTexture = nullptr;
+};
+
 struct ColliderComponent {
   int xo;
   int yo;

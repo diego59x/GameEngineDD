@@ -21,6 +21,9 @@ Scene* Pong::createGameplayScene() {
   scene->addSetupSystem(new WorldSetupSystem());
   scene->addSetupSystem(new PlayerSetupSystem());
 
+  scene->addSetupSystem(new BackgroundSetupSystem(renderer));
+  scene->addRenderSystem(new BackgroundRenderSystem());
+
   scene->addSetupSystem(new TilemapSetupSystem(renderer));
   scene->addRenderSystem(new TilemapRenderSystem());
 

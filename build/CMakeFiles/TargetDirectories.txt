@@ -1,3 +1,0 @@
-/home/diego/Documents/GameEngineDD/build/CMakeFiles/GEA.dir
-/home/diego/Documents/GameEngineDD/build/CMakeFiles/edit_cache.dir
-/home/diego/Documents/GameEngineDD/build/CMakeFiles/rebuild_cache.dir
