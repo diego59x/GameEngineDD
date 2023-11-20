@@ -21,6 +21,8 @@ Scene* Pong::createGameplayScene() {
   scene->addSetupSystem(new WorldSetupSystem());
   scene->addSetupSystem(new PlayerSetupSystem());
 
+  scene->addSetupSystem(new LionsSetupSystem());
+
   scene->addSetupSystem(new BackgroundSetupSystem(renderer));
   scene->addRenderSystem(new BackgroundRenderSystem());
 

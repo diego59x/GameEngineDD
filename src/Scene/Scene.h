@@ -29,6 +29,7 @@ class Scene {
         
         entt::registry r;
 
+        Entity* lions;
         Entity* world;
         Entity* player;
     private: 

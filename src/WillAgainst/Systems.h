@@ -89,6 +89,27 @@ class PlayerSetupSystem : public SetupSystem {
     }
 };
 
+class LionsSetupSystem : public SetupSystem {
+  public:
+    void run() {
+      const auto worldComponent = scene->world->get<WorldComponent>();
+      int spriteSize = 32;
+      int x = 200;
+      int y = 100;
+ 
+      scene->lions= new Entity(scene->r.create(), scene);
+      scene->lions->addComponent<TransformComponent>(glm::vec2(x, y));
+      auto& s = scene->lions->addComponent<SpriteComponent>(
+        "sprites/lion/Lion.png",
+        0, 0,
+        spriteSize,
+        3,
+        1000
+      );
+      s.lastUpdate = SDL_GetTicks();
+    }
+};
+
 class SpriteSetupSystem : public SetupSystem {
   public:
     SpriteSetupSystem(SDL_Renderer* renderer) 
