@@ -8,6 +8,12 @@ struct NameComponent {
     std::string name;
 };
 
+struct MovementStateComponent {
+    std::string state;
+    std::string direction;
+};
+
+
 struct TransformComponent {
     glm::vec2 position;
 };
@@ -25,7 +31,7 @@ struct ColorComponent {
 };
 
 struct SpriteComponent {
-  std::string filename;
+  std::vector<std::string> filenames;
   int xIndex = 0;
   int yIndex = 0;
   int size = 32;

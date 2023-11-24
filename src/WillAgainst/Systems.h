@@ -12,21 +12,28 @@
 class PlayerInputSystem : public EventSystem {
   void run(SDL_Event event) {
     auto& playerSpeed = scene->player->get<SpeedComponent>();
+    auto& playerState = scene->player->get<MovementStateComponent>();
     int speed = 200;
 
     if (event.type == SDL_KEYDOWN) {
       switch(event.key.keysym.sym) {
         case SDLK_RIGHT:
           playerSpeed.x = speed;
+          playerState.state = "running";
+          playerState.direction = "right";
           break;
         case SDLK_LEFT:
           playerSpeed.x = -speed;
+          playerState.state = "running";
+          playerState.direction = "left";
           break;
         case SDLK_UP:
           playerSpeed.y = -speed;
+          playerState.state = "running";
           break;
         case SDLK_DOWN:
           playerSpeed.y = speed;
+          playerState.state = "running";
           break;
       }
     }
@@ -34,15 +41,19 @@ class PlayerInputSystem : public EventSystem {
       switch(event.key.keysym.sym) {
         case SDLK_RIGHT:
           playerSpeed.x = 0;
+          playerState.state = "idle";
           break;
         case SDLK_LEFT:
           playerSpeed.x = 0;
+          playerState.state = "idle";
           break;
         case SDLK_UP:
           playerSpeed.y = 0;
+          playerState.state = "idle";
           break;
         case SDLK_DOWN:
           playerSpeed.y = 0;
+          playerState.state = "idle";
           break;
       }
     }
@@ -75,11 +86,16 @@ class PlayerSetupSystem : public SetupSystem {
       int spriteSize = 32;
       int x = worldComponent.width / 2;
       int y = worldComponent.height / 2;
+      std::vector<std::string> filenames = {
+        "sprites/characterWill/WillLittleCeasarIdle.png",
+        "sprites/characterWill/WillMovement.png"
+      };
  
       scene->player = new Entity(scene->r.create(), scene);
       scene->player->addComponent<TransformComponent>(glm::vec2(x, y));
+      scene->player->addComponent<MovementStateComponent>("idle", "right");
       auto& s = scene->player->addComponent<SpriteComponent>(
-        "sprites/characterWill/WillLittleCeasarIdle.png",
+        filenames,
         0, 0,
         spriteSize,
         4,
@@ -96,11 +112,13 @@ class LionsSetupSystem : public SetupSystem {
       int spriteSize = 32;
       int x = 200;
       int y = 100;
- 
+      std::vector<std::string> filenames = {
+        "sprites/lion/Lion.png"
+      };
       scene->lions= new Entity(scene->r.create(), scene);
       scene->lions->addComponent<TransformComponent>(glm::vec2(x, y));
       auto& s = scene->lions->addComponent<SpriteComponent>(
-        "sprites/lion/Lion.png",
+        filenames,
         0, 0,
         spriteSize,
         3,
@@ -121,7 +139,10 @@ class SpriteSetupSystem : public SetupSystem {
       {
         const auto spriteComponent = view.get<SpriteComponent>(entity);
 
-        TextureManager::UnLoadTexture(spriteComponent.filename, spriteComponent.shader.name);
+        for (auto filename : spriteComponent.filenames)
+        {
+          TextureManager::UnLoadTexture(filename, spriteComponent.shader.name);
+        }
 
       }
     }
@@ -134,7 +155,10 @@ class SpriteSetupSystem : public SetupSystem {
       {
         const auto spriteComponent = view.get<SpriteComponent>(entity);
 
-        TextureManager::LoadTexture(spriteComponent.filename, renderer, spriteComponent.shader);
+        for (auto filename : spriteComponent.filenames)
+        {
+          TextureManager::LoadTexture(filename, renderer, spriteComponent.shader);
+        }
 
       }
     }
@@ -147,6 +171,7 @@ class SpriteRenderSystem : public RenderSystem {
   public:
     void run (SDL_Renderer* renderer) {
       auto view = scene->r.view<TransformComponent, SpriteComponent>();
+      auto& playerState = scene->player->get<MovementStateComponent>();
 
       for (auto entity : view)
       {
@@ -154,22 +179,26 @@ class SpriteRenderSystem : public RenderSystem {
         const auto transformComponent = view.get<TransformComponent>(entity);
 
 
-        Texture* texture = TextureManager::GetTexture(spriteComponent.filename, spriteComponent.shader.name);
-        
-        SDL_Rect clip = {
-          spriteComponent.xIndex * spriteComponent.size,
-          spriteComponent.yIndex * spriteComponent.size,
-          spriteComponent.size,
-          spriteComponent.size
-        };
-        
-        texture->render(
-          transformComponent.position.x,
-          transformComponent.position.y,
-          32,
-          32,
-          &clip
-        );
+        for (auto filename : spriteComponent.filenames)
+        {
+          std::cout << "state player " << playerState.state << "\n";
+
+          Texture* texture = TextureManager::GetTexture(filename, spriteComponent.shader.name);
+          SDL_Rect clip = {
+            spriteComponent.xIndex * spriteComponent.size,
+            spriteComponent.yIndex * spriteComponent.size,
+            spriteComponent.size,
+            spriteComponent.size
+          };
+          
+          texture->render(
+            transformComponent.position.x,
+            transformComponent.position.y,
+            32,
+            32,
+            &clip
+          );
+        }
       }
     }
 };
