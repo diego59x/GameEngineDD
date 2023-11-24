@@ -192,13 +192,17 @@ class SpriteRenderSystem : public RenderSystem {
             spriteComponent.size,
             spriteComponent.size
           };
-          
+          SDL_RendererFlip flip = playerState.direction == "right" ? SDL_FLIP_NONE : SDL_FLIP_HORIZONTAL;
+
           texture->render(
             transformComponent.position.x,
             transformComponent.position.y,
             32,
             32,
-            &clip
+            &clip,
+            0,
+            nullptr,
+            flip
           );
           continue;
         }
@@ -213,13 +217,17 @@ class SpriteRenderSystem : public RenderSystem {
             spriteComponent.size,
             spriteComponent.size
           };
+          SDL_RendererFlip flip = SDL_FLIP_NONE;
           
           texture->render(
             transformComponent.position.x,
             transformComponent.position.y,
             32,
             32,
-            &clip
+            &clip,
+            0,
+            nullptr,
+            flip
           );
         }
       }

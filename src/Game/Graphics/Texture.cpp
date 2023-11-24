@@ -99,7 +99,7 @@ void Texture::render(int x, int y, int w, int h, SDL_Rect* clip, double angle, S
 
 	SDL_Rect renderQuad = { x, y, rWidth, rHeight };
 
-	SDL_RenderCopy(renderer, texture, clip, &renderQuad);
+	SDL_RenderCopyEx(renderer, texture, clip, &renderQuad, angle, center, flip);
 }
 
 bool Texture::lockTexture() {
