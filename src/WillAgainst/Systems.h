@@ -93,6 +93,7 @@ class PlayerSetupSystem : public SetupSystem {
  
       scene->player = new Entity(scene->r.create(), scene);
       scene->player->addComponent<TransformComponent>(glm::vec2(x, y));
+      scene->player->addComponent<NameComponent>("Player");
       scene->player->addComponent<MovementStateComponent>("idle", "right");
       auto& s = scene->player->addComponent<SpriteComponent>(
         filenames,
@@ -117,6 +118,7 @@ class LionsSetupSystem : public SetupSystem {
       };
       scene->lions= new Entity(scene->r.create(), scene);
       scene->lions->addComponent<TransformComponent>(glm::vec2(x, y));
+      scene->lions->addComponent<NameComponent>("Lion");
       auto& s = scene->lions->addComponent<SpriteComponent>(
         filenames,
         0, 0,
@@ -170,18 +172,39 @@ class SpriteSetupSystem : public SetupSystem {
 class SpriteRenderSystem : public RenderSystem {
   public:
     void run (SDL_Renderer* renderer) {
-      auto view = scene->r.view<TransformComponent, SpriteComponent>();
+      auto view = scene->r.view<TransformComponent, SpriteComponent, NameComponent>();
       auto& playerState = scene->player->get<MovementStateComponent>();
 
       for (auto entity : view)
       {
         const auto spriteComponent = view.get<SpriteComponent>(entity);
         const auto transformComponent = view.get<TransformComponent>(entity);
+        const auto nameComponent = view.get<NameComponent>(entity);
 
+        if (nameComponent.name == "Player") {
+          int file = 0;
+          if (playerState.state == "running") file = 1; 
+          const auto filename = spriteComponent.filenames[file];
+          Texture* texture = TextureManager::GetTexture(filename, spriteComponent.shader.name);
+          SDL_Rect clip = {
+            spriteComponent.xIndex * spriteComponent.size,
+            spriteComponent.yIndex * spriteComponent.size,
+            spriteComponent.size,
+            spriteComponent.size
+          };
+          
+          texture->render(
+            transformComponent.position.x,
+            transformComponent.position.y,
+            32,
+            32,
+            &clip
+          );
+          continue;
+        }
 
         for (auto filename : spriteComponent.filenames)
         {
-          std::cout << "state player " << playerState.state << "\n";
 
           Texture* texture = TextureManager::GetTexture(filename, spriteComponent.shader.name);
           SDL_Rect clip = {
